@@ -3,10 +3,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
+  selector: 'page-navegacion-tabs',
+  templateUrl: 'navegacion-tabs.html',
 })
-export class HomePage {
+export class NavegacionTabsPage {
+
+  homePage = 'HomePage'
+  monitoreoPage = 'MonitoreoPage'
 
   constructor(
     public navCtrl: NavController,
@@ -15,7 +18,7 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+    console.log('ionViewDidLoad NavegacionTabsPage');
   }
 
 }
