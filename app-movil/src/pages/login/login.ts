@@ -22,7 +22,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');    
   }
 
-  ir(){
+  ingresar(){
     this.navCtrl.push('NavegacionPage')
   }
 
