@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="618a0b94-a331-4186-b8d9-da756ff8d19f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="618a0b94-a331-4186-b8d9-da756ff8d19f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -34,6 +32,40 @@
             <path>
               <item name="Proyecto-Javascript" type="b2602c69:ProjectViewProjectNode" />
               <item name="Proyecto-Javascript" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proyecto-Javascript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto-Javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="backEnd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proyecto-Javascript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto-Javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="backEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="sistemaRiego-backEnd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proyecto-Javascript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto-Javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="backEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="sistemaRiego-backEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proyecto-Javascript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto-Javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="backEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="sistemaRiego-backEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proyecto-Javascript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto-Javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="backEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="sistemaRiego-backEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -69,12 +101,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1548520443515</updated>
-      <workItem from="1548520444938" duration="2543000" />
+      <workItem from="1548520444938" duration="3655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2543000" />
+    <option name="totallyTimeSpent" value="3655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
