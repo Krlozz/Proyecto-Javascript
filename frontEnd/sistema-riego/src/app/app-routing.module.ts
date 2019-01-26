@@ -60,6 +60,11 @@ const routes: Routes = [
             component: RutaPerfilComponent,
             children: [
               {
+                path: '',
+                pathMatch: 'full',
+                redirectTo: 'historial'
+              },
+              {
                 path: 'notificaciones',
                 component: RutaNotificacionesComponent
               },
