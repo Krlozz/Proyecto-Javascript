@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dbc21751-0802-4c0c-9f4b-772f212cda07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/app/app-routing.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/app/app.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/app/app.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/app/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/assets/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/browserslist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/environments/environment.prod.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/environments/environment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/polyfills.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/styles.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema-riego/src/tslint.json" beforeDir="false" />
-    </list>
+    <list default="true" id="dbc21751-0802-4c0c-9f4b-772f212cda07" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -38,9 +16,10 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -78,7 +57,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -148,13 +127,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Samaniego-Zapata-Daniel-Alejandro" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="C:\Users\Daniel\Documents\GitHub\Proyecto-Javascript\sistema-riego\node_modules\tslint" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="C:\Users\Daniel\Documents\GitHub\Proyecto-Javascript\sistema-riego\node_modules\typescript\lib" />
   </component>
   <component name="RunDashboard">
@@ -181,16 +161,17 @@
       <updated>1548528897733</updated>
       <workItem from="1548528899370" duration="6468000" />
       <workItem from="1548539393350" duration="334000" />
+      <workItem from="1548540995046" duration="60000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6802000" />
+    <option name="totallyTimeSpent" value="6862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13690476" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13690476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -203,7 +184,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.26430976" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32131147" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32131147" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -215,6 +196,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/sistema-riego" />
+    </ignored-roots>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package-lock.json">
@@ -272,9 +258,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
           <caret line="88" column="41" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -282,9 +265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="79" column="38" lean-forward="true" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
