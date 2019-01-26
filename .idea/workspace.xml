@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="618a0b94-a331-4186-b8d9-da756ff8d19f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/controllers/UsuarioController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/controllers/UsuarioController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Hacienda.js" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Hacienda.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Lectura.js" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Lectura.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Parcela.js" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Parcela.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Region.js" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Region.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Rol.js" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Rol.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/RolXUsuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/RolXUsuario.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Sensor.js" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Sensor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Subparcela.js" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Subparcela.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Usuario.js" afterDir="false" />
-    </list>
+    <list default="true" id="618a0b94-a331-4186-b8d9-da756ff8d19f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -231,16 +219,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1548520443515</updated>
-      <workItem from="1548520444938" duration="10298000" />
+      <workItem from="1548520444938" duration="10969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10298000" />
+    <option name="totallyTimeSpent" value="10969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15437302" />
