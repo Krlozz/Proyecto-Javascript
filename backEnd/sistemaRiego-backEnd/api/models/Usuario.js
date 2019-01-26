@@ -33,14 +33,20 @@ module.exports = {
       allowNull: true
     },
 
-    // hacienda: {
-    //   collection: 'Hacienda', // Modelo Hijo
-    //   via: 'idHacienda' // Nombre del Campo
-    // },
-    //
-    // idUsuario: {
-    //   model: 'Usuario' // Modelo Papa
-    // }
+    rolesUsuarios: {
+      collection: 'RolXUsuario', // Modelo Hijo
+      via: 'idUsuario' // Nombre del Campo
+    },
+
+    idHacienda: {
+      model: 'Hacienda' // Modelo Papa
+    },
+
+    parcelas: {
+      collection: 'Parcela', // Modelo Hijo
+      via: 'idUsuario' // Nombre del Campo
+    },
+
 
   },
 

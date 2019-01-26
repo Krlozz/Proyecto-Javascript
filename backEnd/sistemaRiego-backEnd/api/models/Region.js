@@ -21,9 +21,10 @@ module.exports = {
       required: true
     },
 
-    // idRegion: {
-    //   model: 'Region' // Modelo Papa
-    // }
+    haciendas: {
+      collection: 'Hacienda', // Modelo Hijo
+      via: 'idRegion' // Nombre del Campo
+    }
 
   },
 

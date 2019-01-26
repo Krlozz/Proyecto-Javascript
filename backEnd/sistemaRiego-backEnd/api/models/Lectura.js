@@ -15,10 +15,9 @@ module.exports = {
       required: true
     },
 
-    // sensor: {
-    //   collection: 'Sensor', // Modelo Hijo
-    //   via: 'idSensor' // Nombre del Campo
-    // },
+    idSensor: {
+      model: 'Sensor' // Modelo Papa
+    },
 
   },
 

@@ -21,19 +21,18 @@ module.exports = {
       required: true
     },
 
-    // hacienda: {
-    //   collection: 'Hacienda', // Modelo Hijo
-    //   via: 'idHacienda' // Nombre del Campo
-    // },
+    idUsuario: {
+      model: 'Usuario' // Modelo Papa
+    },
 
-    // usuario: {
-    //   collection: 'Usuario', // Modelo Hijo
-    //   via: 'idUsuario' // Nombre del Campo
-    // },
-    //
-    // idParcela: {
-    //   model: 'Parcela' // Modelo Papa
-    // }
+    idHacienda: {
+      model: 'Hacienda' // Modelo Papa
+    },
+
+    subparcelas: {
+      collection: 'Subparcela', // Modelo Hijo
+      via: 'idParcela' // Nombre del Campo
+    }
 
   },
 

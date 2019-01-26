@@ -9,17 +9,15 @@ module.exports = {
 
   attributes: {
 
-  //   usuario: {
-  //     collection: 'Usuario', // Modelo Hijo
-  //     via: 'idUsuario' // Nombre del Campo
-  //   },
-  //
-  //   rol: {
-  //     collection: 'Rol', // Modelo Hijo
-  //     via: 'idRol' // Nombre del Campo
-  //   }
-  //
-   },
+    idUsuario: {
+      model: 'Usuario' // Modelo Papa
+    },
+
+    idRol: {
+      model: 'Rol' // Modelo Papa
+    }
+
+  },
 
 };
 

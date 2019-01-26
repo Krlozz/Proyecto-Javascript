@@ -21,14 +21,14 @@ module.exports = {
       required: true
     },
 
-    // parcela: {
-    //   collection: 'Parcela', // Modelo Hijo
-    //   via: 'idParcela' // Nombre del Campo
-    // },
-    //
-    // idSubparcela: {
-    //   model: 'Subparcela' // Modelo Papa
-    // }
+    idParcela: {
+      model: 'Parcela' // Modelo Papa
+    },
+
+    sensores: {
+      collection: 'Sensor', // Modelo Hijo
+      via: 'idSubparcela' // Nombre del Campo
+    }
 
   },
 

@@ -27,14 +27,19 @@ module.exports = {
       required: true
     },
 
-    // region: {
-    //   collection: 'Region', // Modelo Hijo
-    //   via: 'idRaza' // Nombre del Campo
-    // },
-    //
-    // idHacienda: {
-    //   model: 'Hacienda' // Modelo Papa
-    // }
+    idRegion: {
+      model: 'Region' // Modelo Papa
+    },
+
+    usuarios: {
+      collection: 'Usuario', // Modelo Hijo
+      via: 'idHacienda' // Nombre del Campo
+    },
+
+    parcelasHacienda: {
+      collection: 'Parcela', // Modelo Hijo
+      via: 'idHacienda' // Nombre del Campo
+    }
 
   },
 

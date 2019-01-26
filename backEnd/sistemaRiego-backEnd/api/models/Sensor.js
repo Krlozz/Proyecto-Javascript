@@ -15,14 +15,14 @@ module.exports = {
       required: true
     },
 
-    // subparcela: {
-    //   collection: 'Subparcela', // Modelo Hijo
-    //   via: 'idSubparcela' // Nombre del Campo
-    // },
-    //
-    // idSensor: {
-    //   model: 'Sensor' // Modelo Papa
-    // }
+    idSubparcela: {
+      model: 'Subparcela' // Modelo Papa
+    },
+
+    lecturas: {
+      collection: 'Lectura', // Modelo Hijo
+      via: 'idSensor' // Nombre del Campo
+    }
 
   },
 

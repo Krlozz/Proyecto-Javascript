@@ -21,9 +21,10 @@ module.exports = {
       required: true
     },
 
-    // idRol: {
-    //   model: 'Rol' // Modelo Papa
-    // }
+    rolUsuarios: {
+      collection: 'RolXUsuario', // Modelo Hijo
+      via: 'idRol' // Nombre del Campo
+    }
 
   },
 
