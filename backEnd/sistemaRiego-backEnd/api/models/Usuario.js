@@ -18,6 +18,12 @@ module.exports = {
     cedulaUsuario: {
       type: 'string',
       columnName: 'cedula_Usuario',
+      required: true,
+      unique: true
+    },
+
+    password: {
+      type: 'string',
       required: true
     },
 

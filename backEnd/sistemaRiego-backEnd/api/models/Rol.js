@@ -11,8 +11,12 @@ module.exports = {
 
     nombreRol: {
       type: 'string',
-      columnName: 'nombre_Rol',
-      required: true
+      isIn: [
+        'Administrador',
+        'Encargado',
+      ],
+      defaultsTo: 'Encargado',
+      columnName: 'nombre_Rol'
     },
 
     direccionRol: {
