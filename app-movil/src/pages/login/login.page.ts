@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  // /navegacion/navegacion-tabs/home
+
 
   constructor(
     private readonly _router:Router
@@ -15,10 +17,8 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  ingresarANavegacion(){
-    this._router.navigate(['/navegacion'])
+  ingresar(){
+    this._router.navigate(['/navegacion','navegacion-tabs','home'])
   }
-
-
 
 }
