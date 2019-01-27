@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="618a0b94-a331-4186-b8d9-da756ff8d19f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Rol.js" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Rol.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Usuario.js" afterDir="false" />
-    </list>
+    <list default="true" id="618a0b94-a331-4186-b8d9-da756ff8d19f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -207,12 +204,12 @@
       <option name="presentableId" value="Default" />
       <updated>1548520443515</updated>
       <workItem from="1548520444938" duration="10969000" />
-      <workItem from="1548542382778" duration="5491000" />
+      <workItem from="1548542382778" duration="6114000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16541000" />
+    <option name="totallyTimeSpent" value="17164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
