@@ -1,0 +1,91 @@
+
+<h1>Inicio</h1>
+
+<ul>
+
+  <li>
+    <a routerLink="/inicio">Inicio</a>
+  </li>
+
+  <li>
+    <a routerLink="/acerca">Acerca</a>
+  </li>
+
+  <li>
+    <a routerLink="/contactanos">Contactanos</a>
+  </li>
+
+  <li>
+    <a routerLink="/login">Login</a>
+
+    <ul>
+      <li>
+        <a routerLink="/login/usuario-encargado"> Usuario Encargado </a>
+
+        <ul>
+          <li>
+            <a routerLink="/login/usuario-encargado/perfil"> Perfil </a>
+
+            <ul>
+              <li>
+                <a routerLink="/login/usuario-encargado/perfil/notificaciones"> Notificaciones </a>
+              </li>
+
+              <li>
+                <a routerLink="/login/usuario-encargado/perfil/historial"> Historial </a>
+              </li>
+
+              <li>
+                <a routerLink="/login/usuario-encargado/perfil/ajustes"> Ajustes </a>
+              </li>
+            </ul>
+
+          </li>
+
+          <li>
+            <a routerLink="/login/usuario-encargado/reestablecer-contrasena"> Restablecer Contraseña </a>
+          </li>
+        </ul>
+
+      </li>
+
+      <li>
+        <a routerLink="/login/usuario-administrador"> Usuario Administrador </a>
+
+        <ul>
+          <li>
+            <a routerLink="/login/usuario-administrador/gestion-usuarios"> Gestión Usuarios </a>
+          </li>
+
+          <li>
+            <a routerLink="/login/usuario-administrador/asignar-sensor"> Asignar Sensor </a>
+          </li>
+
+          <li>
+            <a routerLink="/login/usuario-administrador/gestion-hacienda"> Gestión Hacienda </a>
+          </li>
+
+          <li>
+            <a routerLink="/login/usuario-administrador/parcelas"> Administración Parcelas</a>
+
+            <ol>
+              <li>
+                <a routerLink="/login/usuario-administrador/parcelas/gestion-parcela"> Gestión Parcela </a>
+              </li>
+
+              <li>
+                <a routerLink="/login/usuario-administrador/parcelas/gestion-subparcela"> Gestión Subparcela </a>
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+  </li>
+
+</ul>
+
+<router-outlet></router-outlet>
+
+<p> Footer </p>
