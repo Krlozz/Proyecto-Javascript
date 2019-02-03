@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-ruta-gestion-usuarios',
   templateUrl: './ruta-gestion-usuarios.component.html',
-  styleUrls: ['./ruta-gestion-usuarios.component.scss']
+  styleUrls: ['./ruta-gestion-usuarios.component.css']
 })
 export class RutaGestionUsuariosComponent implements OnInit {
 
