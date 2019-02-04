@@ -1,0 +1,75 @@
+<form #formularioCrearUsuario="ngForm"
+      novalidate
+      (submit)="emitirFormularioValido(formularioCrearUsuario)"
+>
+  <div>
+    <p *ngIf="inputNombre.errors">
+
+      <p-message
+        *ngIf="inputNombre.errors.required"
+        severity="warn"
+        text="Error: El nombre es requerido"></p-message>
+
+    </p>
+    <label [hidden]="true"
+           for="nombre">Nombre Usuario</label>
+
+    <div class="ulinputgroup">
+      <input id="nombre"
+             pInputText
+             placeholder="Nombre Usuario"
+             required
+             type="text"
+             name="nombre"
+             [(ngModel)]="nombreUsuario"
+             #inputNombre="ngModel"
+      >
+    </div>
+  </div>
+  <div>
+    <label for ="cedula">
+
+    </label>
+    <input id="cedula"
+           name="cedula"
+           placeholder="Cedula Usuario"
+           type="text"
+           [(ngModel)]="cedulaUsuario">
+  </div>
+  <div>
+    <label for ="direccion">
+
+    </label>
+    <input id="direccion"
+           name="direccion"
+           placeholder="Direccion Usuario"
+           type="text"
+           [(ngModel)]="direccionUsuario">
+  </div>
+
+  <div>
+    <label for ="telefono">
+
+    </label>
+    <input id="telefono"
+           name="telefono"
+           placeholder="Telefono Usuario"
+           type="text"
+           [(ngModel)]="telefonoUsuario">
+  </div>
+  <div>
+    <label for ="password">
+
+    </label>
+    <input id="password"
+           name="password"
+           placeholder="password Usuario"
+           type="text"
+           [(ngModel)]="passwordUsuario">
+  </div>
+
+  <button [disabled]="formularioCrearUsuario.invalid">
+    {{nombreBoton}}
+  </button>
+
+</form>

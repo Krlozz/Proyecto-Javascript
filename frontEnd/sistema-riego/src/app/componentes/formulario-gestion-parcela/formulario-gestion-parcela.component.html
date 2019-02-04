@@ -1,0 +1,46 @@
+<form #formularioCrearParcela="ngForm"
+      novalidate
+      (submit)="emitirFormularioValido(formularioCrearParcela)"
+>
+  <div>
+    <p *ngIf="inputNombre.errors">
+
+      <p-message
+        *ngIf="inputNombre.errors.required"
+        severity="warn"
+        text="Error: El nombre es requerido"></p-message>
+
+    </p>
+    <label [hidden]="true"
+           for="codigo">Codigo Parcela</label>
+
+    <div class="ulinputgroup">
+      <input id="codigo"
+             pInputText
+             placeholder="Codigo Parcela"
+             required
+             type="text"
+             name="codigo"
+             [(ngModel)]="codigoParcela"
+             #inputNombre="ngModel"
+      >
+    </div>
+  </div>
+  <div>
+    <label for ="medidas">
+
+    </label>
+    <input id="medidas"
+           name="medidas"
+           placeholder="Medidas Parcela"
+           type="text"
+           [(ngModel)]="medidasParcela">
+  </div>
+
+
+
+  <button [disabled]="formularioCrearParcela.invalid">
+    {{nombreBoton}}
+  </button>
+
+</form>

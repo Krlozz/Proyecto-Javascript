@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HaciendaRestService} from '../../servicios/hacienda-rest.service';
+import {Hacienda} from '../../interfaces/hacienda';
 
 @Component({
   selector: 'app-ruta-gestion-hacienda',
@@ -6,10 +8,48 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ruta-gestion-hacienda.component.scss']
 })
 export class RutaGestionHaciendaComponent implements OnInit {
-
-  constructor() { }
+hacienda: HaciendaEjemplo = {
+  nombre: 'hacienda1',
+  direccion: 'direccion1',
+  telefono: '222'
+};
+  constructor(private readonly _haciendaRestService: HaciendaRestService) { }
 
   ngOnInit() {
   }
 
+  crearHacienda(haciendaObjeto){
+    const crearHacienda$ = this._haciendaRestService
+      .create(
+        haciendaObjeto.nombre,
+        haciendaObjeto.direccion,
+        haciendaObjeto.telefono
+      );
+  crearHacienda$
+    .subscribe(
+      (hacienda:Hacienda) =>{
+        alert(`Hacienda creada: ${hacienda.nombre}`)
+      },
+      (error) =>{
+        console.log('Error: ', error)
+      }
+    );
+
+  }
+
+  nombreContieneA(nombre:String):boolean{
+    return nombre.toLowerCase().includes('a')
+  }
+  mostrarEnConsola(objeto){
+    console.log(objeto)
+    console.log(objeto)
+  }
+
+
+
+}
+interface HaciendaEjemplo {
+  nombre: string;
+  direccion: string;
+  telefono: string;
 }

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RutaInicioComponent } from './rutas/ruta-inicio/ruta-inicio.component';
@@ -21,6 +20,24 @@ import { RutaGestionHaciendaComponent } from './rutas/ruta-gestion-hacienda/ruta
 import { RutaParcelasComponent } from './rutas/ruta-parcelas/ruta-parcelas.component';
 import { RutaGestionParcelaComponent } from './rutas/ruta-gestion-parcela/ruta-gestion-parcela.component';
 import { RutaGestionSubparcelaComponent } from './rutas/ruta-gestion-subparcela/ruta-gestion-subparcela.component';
+import { FormularioHaciendaComponent } from './componentes/formulario-hacienda/formulario-hacienda.component';
+import {HaciendaRestService} from "./servicios/hacienda-rest.service";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ButtonModule} from "primeng/button";
+import {TableModule} from "primeng/table";
+import {CardModule, ChartModule, InputTextModule, MessageModule, MessagesModule} from "primeng/primeng";
+import { FormularioUsuarioComponent } from './componentes/formulario-usuario/formulario-usuario.component';
+import { FormularioActualizarHaciendaComponent } from './componentes/formulario-actualizar-hacienda/formulario-actualizar-hacienda.component';
+import { FormularioActualizarUsuarioComponent } from './componentes/formulario-actualizar-usuario/formulario-actualizar-usuario.component';
+import { FormularioGestionParcelaComponent } from './componentes/formulario-gestion-parcela/formulario-gestion-parcela.component';
+import { FormularioGestionSubparcelaComponent } from './componentes/formulario-gestion-subparcela/formulario-gestion-subparcela.component';
+import { FormularioGestionLecturaComponent } from './componentes/formulario-gestion-lectura/formulario-gestion-lectura.component';
+import { FormularioGestionSensorComponent } from './componentes/formulario-gestion-sensor/formulario-gestion-sensor.component';
+import { FormularioActualizarSensorComponent } from './componentes/formulario-actualizar-sensor/formulario-actualizar-sensor.component';
+import {UsuarioRestService} from "./servicios/usuario-rest.service";
+import {ParcelaRestService} from "./servicios/parcela-rest.service";
 
 @NgModule({
   declarations: [
@@ -42,13 +59,36 @@ import { RutaGestionSubparcelaComponent } from './rutas/ruta-gestion-subparcela/
     RutaGestionHaciendaComponent,
     RutaParcelasComponent,
     RutaGestionParcelaComponent,
-    RutaGestionSubparcelaComponent
+    RutaGestionSubparcelaComponent,
+    FormularioHaciendaComponent,
+    FormularioUsuarioComponent,
+    FormularioActualizarHaciendaComponent,
+    FormularioActualizarUsuarioComponent,
+    FormularioGestionParcelaComponent,
+    FormularioGestionSubparcelaComponent,
+    FormularioGestionLecturaComponent,
+    FormularioGestionSensorComponent,
+    FormularioActualizarSensorComponent
   ],  // Components
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,  // Acceso a un servicio HttpClient
+    FormsModule,
+    BrowserAnimationsModule, // Animaciones
+    ButtonModule,
+    TableModule,
+    InputTextModule,
+    MessagesModule,
+    MessageModule,
+    CardModule,
+    ChartModule
   ],  // Modulos
-  providers: [], // Servicios
+      providers: [
+HaciendaRestService,
+        UsuarioRestService,
+        ParcelaRestService
+  ], // Servicios
   bootstrap: [AppComponent] // Componente Principal
 })
 export class AppModule { }
