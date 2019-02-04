@@ -22,7 +22,7 @@ module.exports = {
       unique: true
     },
 
-    password: {
+    passwordUsuario: {
       type: 'string',
       required: true
     },

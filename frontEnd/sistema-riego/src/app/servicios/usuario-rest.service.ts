@@ -29,27 +29,28 @@ export class UsuarioRestService {
       .pipe(map(r => <Usuario> r)); // Castear
   }
 
-  create(nombre: string,
-         cedula: string,
-         direccion: string,
-         telefono: string,
-          password:string
+  create(nombre: any,
+         cedula: any,
+         direccion: any,
+         telefono: any,
+          password:any
 
-  ): Observable<Usuario> {
+  ) {
+
 
     const objetoAGuardar = {
-      nombre: nombre,
-      cedula: cedula,
-      direccion: direccion,
-      telefono: telefono,
-      password: password
+      nombreUsuario: nombre,
+      cedulaUsuario: cedula,
+      direccionUsuario: direccion,
+      telefonoUsuario: telefono,
+      passwordUsuario: password
     };
 
     const url = environment.url + this.nombreModelo;
 
     return this._httpClient
       .post(url, objetoAGuardar)
-      .pipe(map(r => <Usuario> r)); // Castear
+      //.pipe(map(r => <Usuario> r)); // Castear
   }
 
   findOneById(id: number | string): Observable<Usuario> {
@@ -74,19 +75,6 @@ export class UsuarioRestService {
 
 
 }
-
-
-// epn.edu.ec -> 192.170.1.2
-
-// CORS -> Navegador
-
-// epn.edu.ec -> HTTP fbi.gov.us
-//
-//
-
-// fbi.gov.us -> 192.220.1.5
-
-// CORS -> Navegador
 
 
 

@@ -17,17 +17,17 @@ export class RutaGestionUsuariosComponent implements OnInit {
   crearUsuario(usuarioObjeto){
     const crearUsuario$ = this._usuarioRestService
       .create(
-        usuarioObjeto.nombre,
-        usuarioObjeto.cedula,
-        usuarioObjeto.password,
-        usuarioObjeto.direccion,
-        usuarioObjeto.telefono
+        usuarioObjeto.nombreUsuario,
+        usuarioObjeto.cedulaUsuario,
+        usuarioObjeto.passwordUsuario,
+        usuarioObjeto.direccionUsuario,
+        usuarioObjeto.telefonoUsuario
 
       );
     crearUsuario$
       .subscribe(
         (usuario:Usuario) =>{
-          alert(`Usuario creado: ${usuario.nombre}`)
+          alert(`Usuario creado: ${usuario.nombreUsuario}`)
         },
         (error) =>{
           console.log('Error: ', error)

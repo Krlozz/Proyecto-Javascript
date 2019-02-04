@@ -18,7 +18,6 @@ module.exports = {
     direccionHacienda: {
       type: 'string',
       columnName: 'direccion_Hacienda',
-      unique: true,
       required: true
     },
     telefonoHacienda: {

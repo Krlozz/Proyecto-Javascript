@@ -12,44 +12,45 @@
 
     </p>
     <label [hidden]="true"
-           for="nombre">Nombre Hacienda</label>
+           for="nombreHacienda">Nombre Hacienda</label>
 
     <div class="ulinputgroup">
-      <input id="nombre"
+      <input id="nombreHacienda"
              pInputText
              placeholder="Nombre Hacienda"
              required
              type="text"
-             name="nombre"
-             [(ngModel)]="nombreUsuario"
+             name="nombreHacienda"
+             [(ngModel)]="nombreHacienda"
              #inputNombre="ngModel"
       >
     </div>
   </div>
   <div>
-    <label for ="direccion">
+    <label for ="direccionHacienda">
 
     </label>
-    <input id="direccion"
-           name="direccion"
+    <input id="direccionHacienda"
+           name="direccionHacienda"
            placeholder="Direccion Hacienda"
            type="text"
-           [(ngModel)]="direccionUsuario">
+           [(ngModel)]="direccionHacienda">
   </div>
 
   <div>
-    <label for ="telefono">
+    <label for ="telefonoHacienda">
 
     </label>
-    <input id="telefono"
+    <input id="telefonoHacienda"
            name="telefono"
            placeholder="Telefono Hacienda"
            type="text"
-           [(ngModel)]="telefonoUsuario">
+           [(ngModel)]="telefonoHacienda">
   </div>
 
-  <button [disabled]="formularioCrearHacienda.invalid">
+  <button [disabled]="formularioCrearHacienda.invalid" (click)="crear()">
     {{nombreBoton}}
   </button>
+
 
 </form>

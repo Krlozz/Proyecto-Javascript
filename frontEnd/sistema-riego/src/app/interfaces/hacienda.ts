@@ -1,8 +1,8 @@
 export interface Hacienda {
   id?: number;
-  nombre: string;
-  direccion: string;
-  telefono: string;
+  nombreHacienda: string;
+  direccionHacienda: string;
+  telefonoHacienda: string;
   createdAt?: number;
   updatedAt?: number;
 

@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {UsuarioRestService} from "../../servicios/usuario-rest.service";
 
 @Component({
   selector: 'app-formulario-usuario',
@@ -25,7 +26,8 @@ export class FormularioUsuarioComponent implements OnInit {
   passwordUsuario:string;
 
 
-  constructor() { }
+  constructor(
+    public readonly usuarioRestService : UsuarioRestService) { }
 
   ngOnInit() {
     this.nombreUsuario= this.nombre;
@@ -45,5 +47,12 @@ export class FormularioUsuarioComponent implements OnInit {
     };
     this.formularioValido.emit((objetoUsuario))
   }
-
+  crear () {
+    this.usuarioRestService.create(this.nombreUsuario, this.cedulaUsuario,
+      this.direccionUsuario, this.telefonoUsuario, this.passwordUsuario).subscribe(
+      resp=> {
+        console.log(resp)
+      }
+    )
+  }
 }

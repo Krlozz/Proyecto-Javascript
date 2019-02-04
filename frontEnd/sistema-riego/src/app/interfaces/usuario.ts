@@ -1,4 +1,9 @@
 export interface Usuario {
   id?: number;
-  codigo: string
+  nombreUsuario: string
+  cedulaUsuario:string
+  telefonoUsuario:string
+  direccionUsuario:string
+  passwordUsuario:string
+
 }

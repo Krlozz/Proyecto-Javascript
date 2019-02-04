@@ -18,17 +18,21 @@ hacienda: HaciendaEjemplo = {
   ngOnInit() {
   }
 
+
+
   crearHacienda(haciendaObjeto){
+    console.log(haciendaObjeto, "Estoy en ruta gestyion hacienda")
     const crearHacienda$ = this._haciendaRestService
       .create(
-        haciendaObjeto.nombre,
-        haciendaObjeto.direccion,
-        haciendaObjeto.telefono
+        haciendaObjeto.nombreHacienda,
+        haciendaObjeto.direccionHacienda,
+        haciendaObjeto.telefonoHacienda
       );
   crearHacienda$
     .subscribe(
       (hacienda:Hacienda) =>{
-        alert(`Hacienda creada: ${hacienda.nombre}`)
+        console.log('')
+        alert(`Hacienda creada: ${hacienda.nombreHacienda}`)
       },
       (error) =>{
         console.log('Error: ', error)

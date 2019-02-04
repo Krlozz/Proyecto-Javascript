@@ -12,63 +12,63 @@
 
     </p>
     <label [hidden]="true"
-           for="nombre">Nombre Usuario</label>
+           for="nombreUsuario">Nombre Usuario</label>
 
     <div class="ulinputgroup">
-      <input id="nombre"
+      <input id="nombreUsuario"
              pInputText
              placeholder="Nombre Usuario"
              required
              type="text"
-             name="nombre"
+             name="nombreUsuario"
              [(ngModel)]="nombreUsuario"
              #inputNombre="ngModel"
       >
     </div>
   </div>
   <div>
-    <label for ="cedula">
+    <label for ="cedulaUsuario">
 
     </label>
-    <input id="cedula"
-           name="cedula"
+    <input id="cedulaUsuario"
+           name="cedulaUsuario"
            placeholder="Cedula Usuario"
            type="text"
            [(ngModel)]="cedulaUsuario">
   </div>
   <div>
-    <label for ="direccion">
+    <label for ="direccionUsuario">
 
     </label>
-    <input id="direccion"
-           name="direccion"
+    <input id="direccionUsuario"
+           name="direccionUsuario"
            placeholder="Direccion Usuario"
            type="text"
            [(ngModel)]="direccionUsuario">
   </div>
 
   <div>
-    <label for ="telefono">
+    <label for ="telefonoUsuario">
 
     </label>
-    <input id="telefono"
-           name="telefono"
+    <input id="telefonoUsuario"
+           name="telefonoUsuario"
            placeholder="Telefono Usuario"
            type="text"
            [(ngModel)]="telefonoUsuario">
   </div>
   <div>
-    <label for ="password">
+    <label for ="passwordUsuario">
 
     </label>
-    <input id="password"
-           name="password"
+    <input id="passwordUsuario"
+           name="passwordUsuario"
            placeholder="password Usuario"
            type="text"
            [(ngModel)]="passwordUsuario">
   </div>
 
-  <button [disabled]="formularioCrearUsuario.invalid">
+  <button [disabled]="formularioCrearUsuario.invalid" (click)="crear()">
     {{nombreBoton}}
   </button>
 

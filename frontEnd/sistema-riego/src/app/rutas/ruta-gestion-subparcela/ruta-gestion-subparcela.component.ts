@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Subparcela} from "../../interfaces/subparcela";
 import {SubparcelaRestService} from "../../servicios/subparcela-rest.service";
-import {ParcelaRestService} from "../../servicios/parcela-rest.service";
-import {Parcela} from "../../interfaces/parcela";
 
 @Component({
   selector: 'app-ruta-gestion-subparcela',
@@ -11,12 +9,12 @@ import {Parcela} from "../../interfaces/parcela";
 })
 export class RutaGestionSubparcelaComponent implements OnInit {
 
-  parcela: SubparcelaEjemplo = {
+  subparcela: SubparcelaEjemplo = {
     codigo: 'hacienda1',
     medidas: 'direccion1',
 
   };
-  constructor(private readonly _subparcelaRestService: ParcelaRestService) { }
+  constructor(private readonly _subparcelaRestService: SubparcelaRestService) { }
 
   ngOnInit() {
   }
@@ -30,7 +28,7 @@ export class RutaGestionSubparcelaComponent implements OnInit {
     crearSubparcela
       .subscribe(
         (subparcela:Subparcela) =>{
-          alert(`Parcela creada: ${subparcela.codigo}`)
+          alert(`Subparcela creada: ${subparcela.codigo}`)
         },
         (error) =>{
           console.log('Error: ', error)

@@ -16,11 +16,11 @@ export class HaciendaRestService {
 
   findAll(): Observable<Hacienda[]> {
     // OBSERVABLE
-    const razas$ = this._httpClient
+    const hacienda$ = this._httpClient
       .get(environment.url + this.nombreModelo)
       .pipe(map(r => <Hacienda[]> r)); // Castear
 
-    return razas$;
+    return hacienda$;
   }
 
   delete(id: number): Observable<Hacienda> {
@@ -29,21 +29,23 @@ export class HaciendaRestService {
       .pipe(map(r => <Hacienda> r)); // Castear
   }
 
-  create(nombre: string,
-         direccion: string,
-         telefono: string): Observable<Hacienda> {
+  create(nombre: any,
+         direccion: any,
+         telefono: any) {
+
 
     const objetoAGuardar = {
-      nombre: nombre,
-      direccion: direccion,
-      telefono: telefono,
+      nombreHacienda: nombre,
+      direccionHacienda: direccion,
+      telefonoHacienda: telefono,
     };
 
     const url = environment.url + this.nombreModelo;
-
+console.log(url)
     return this._httpClient
       .post(url, objetoAGuardar)
-      .pipe(map(r => <Hacienda> r)); // Castear
+       //.pipe(map(r => <Hacienda> r)); // Castear
+
   }
 
   findOneById(id: number | string): Observable<Hacienda> {
