@@ -21,17 +21,17 @@ hacienda: HaciendaEjemplo = {
 
 
   crearHacienda(haciendaObjeto){
-    console.log(haciendaObjeto, "Estoy en ruta gestyion hacienda")
     const crearHacienda$ = this._haciendaRestService
       .create(
         haciendaObjeto.nombreHacienda,
         haciendaObjeto.direccionHacienda,
-        haciendaObjeto.telefonoHacienda
+        haciendaObjeto.telefonoHacienda,
+        haciendaObjeto.idRegionHacienda
       );
+    console.log(haciendaObjeto)
   crearHacienda$
     .subscribe(
       (hacienda:Hacienda) =>{
-        console.log('')
         alert(`Hacienda creada: ${hacienda.nombreHacienda}`)
       },
       (error) =>{

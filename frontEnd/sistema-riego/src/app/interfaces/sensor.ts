@@ -1,5 +1,4 @@
-export interface Parcela {
+export interface Sensor {
   id?: number;
-  medidas: string;
-  codigo: string;
+ codigoSensor: string;
 }

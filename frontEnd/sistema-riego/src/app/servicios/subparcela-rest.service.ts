@@ -29,21 +29,21 @@ export class SubparcelaRestService {
       .pipe(map(r => <Subparcela> r)); // Castear
   }
 
-  create(medidas: string,
-         codigo: string
+  create(medidas: any,
+         codigo: any
 
-  ): Observable<Subparcela> {
+  ) {
 
     const objetoAGuardar = {
-      medidas: medidas,
-      codigo: codigo
+      medidasSubparcela: medidas,
+      codigoSubparcela: codigo
     };
 
     const url = environment.url + this.nombreModelo;
 
     return this._httpClient
       .post(url, objetoAGuardar)
-      .pipe(map(r => <Subparcela> r)); // Castear
+     // .pipe(map(r => <Subparcela> r)); // Castear
   }
 
   findOneById(id: number | string): Observable<Subparcela> {

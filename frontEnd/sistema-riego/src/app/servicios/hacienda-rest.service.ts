@@ -15,7 +15,6 @@ export class HaciendaRestService {
   }
 
   findAll(): Observable<Hacienda[]> {
-    // OBSERVABLE
     const hacienda$ = this._httpClient
       .get(environment.url + this.nombreModelo)
       .pipe(map(r => <Hacienda[]> r)); // Castear
@@ -31,13 +30,15 @@ export class HaciendaRestService {
 
   create(nombre: any,
          direccion: any,
-         telefono: any) {
+         telefono: any,
+         idRegion: any) {
 
 
     const objetoAGuardar = {
       nombreHacienda: nombre,
       direccionHacienda: direccion,
       telefonoHacienda: telefono,
+      idRegionHacienda:idRegion
     };
 
     const url = environment.url + this.nombreModelo;
@@ -71,18 +72,6 @@ console.log(url)
 
 }
 
-
-// epn.edu.ec -> 192.170.1.2
-
-// CORS -> Navegador
-
-// epn.edu.ec -> HTTP fbi.gov.us
-//
-//
-
-// fbi.gov.us -> 192.220.1.5
-
-// CORS -> Navegador
 
 
 

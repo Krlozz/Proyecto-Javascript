@@ -1,4 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ParcelaRestService} from "../../servicios/parcela-rest.service";
+import {SubparcelaRestService} from "../../servicios/subparcela-rest.service";
 
 @Component({
   selector: 'app-formulario-gestion-subparcela',
@@ -18,7 +20,7 @@ export class FormularioGestionSubparcelaComponent implements OnInit {
   codigoSubparcela:string;
 
 
-  constructor() { }
+  constructor(public readonly subparcelaRestService : SubparcelaRestService){ }
 
   ngOnInit() {
     this.medidasSubparcela= this.medidas;
@@ -32,5 +34,11 @@ export class FormularioGestionSubparcelaComponent implements OnInit {
     };
     this.formularioValido.emit((objetoSubparcela))
   }
-
+  crear () {
+    this.subparcelaRestService.create(this.codigoSubparcela , this.medidasSubparcela).subscribe(
+      resp=> {
+        console.log(resp)
+      }
+    )
+  }
 }

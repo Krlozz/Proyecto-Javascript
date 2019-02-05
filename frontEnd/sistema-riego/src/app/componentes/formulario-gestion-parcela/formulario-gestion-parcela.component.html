@@ -12,26 +12,26 @@
 
     </p>
     <label [hidden]="true"
-           for="codigo">Codigo Parcela</label>
+           for="codigoParcela">Codigo Parcela</label>
 
     <div class="ulinputgroup">
-      <input id="codigo"
+      <input id="codigoParcela"
              pInputText
              placeholder="Codigo Parcela"
              required
              type="text"
-             name="codigo"
+             name="codigoParcela"
              [(ngModel)]="codigoParcela"
              #inputNombre="ngModel"
       >
     </div>
   </div>
   <div>
-    <label for ="medidas">
+    <label for ="medidasParcela">
 
     </label>
-    <input id="medidas"
-           name="medidas"
+    <input id="medidasParcela"
+           name="medidasParcela"
            placeholder="Medidas Parcela"
            type="text"
            [(ngModel)]="medidasParcela">
@@ -39,7 +39,7 @@
 
 
 
-  <button [disabled]="formularioCrearParcela.invalid">
+  <button [disabled]="formularioCrearParcela.invalid"  (click)="crear()">
     {{nombreBoton}}
   </button>
 

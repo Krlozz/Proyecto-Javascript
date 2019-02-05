@@ -22,13 +22,13 @@ export class RutaGestionSubparcelaComponent implements OnInit {
   crearSubparcela(subparcelaObjeto){
     const crearSubparcela = this._subparcelaRestService
       .create(
-        subparcelaObjeto.codigo,
-        subparcelaObjeto.medidas
+        subparcelaObjeto.codigoSubparcela,
+        subparcelaObjeto.medidasSubparcela
       );
     crearSubparcela
       .subscribe(
         (subparcela:Subparcela) =>{
-          alert(`Subparcela creada: ${subparcela.codigo}`)
+          alert(`Subparcela creada: ${subparcela.codigoSubparcela}`)
         },
         (error) =>{
           console.log('Error: ', error)

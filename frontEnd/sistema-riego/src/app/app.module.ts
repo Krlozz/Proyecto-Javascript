@@ -39,6 +39,8 @@ import { FormularioActualizarSensorComponent } from './componentes/formulario-ac
 import {UsuarioRestService} from "./servicios/usuario-rest.service";
 import {ParcelaRestService} from "./servicios/parcela-rest.service";
 import {SubparcelaRestService} from "./servicios/subparcela-rest.service";
+import {SensorRestService} from "./servicios/sensor-rest.service";
+import {RegionRestService} from "./servicios/region-rest.service";
 
 @NgModule({
   declarations: [
@@ -89,7 +91,9 @@ import {SubparcelaRestService} from "./servicios/subparcela-rest.service";
 HaciendaRestService,
         UsuarioRestService,
         ParcelaRestService,
-        SubparcelaRestService
+        SubparcelaRestService,
+        SensorRestService,
+        RegionRestService
   ], // Servicios
   bootstrap: [AppComponent] // Componente Principal
 })

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {SubparcelaRestService} from "../../servicios/subparcela-rest.service";
+import {SensorRestService} from "../../servicios/sensor-rest.service";
 
 @Component({
   selector: 'app-formulario-gestion-sensor',
@@ -7,9 +9,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioGestionSensorComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+
+  codigo:string;
+  @Input()
+  nombreBoton:string;
+  @Output()
+  formularioValido = new EventEmitter();
+
+  codigoSensor:string;
+
+
+  constructor(public readonly sensorRestService : SensorRestService){ }
 
   ngOnInit() {
+    this.codigoSensor= this.codigo;
+
   }
 
+  emitirFormularioValido(){
+    const objetoSensor = {
+
+      codigo:this.codigoSensor
+    };
+    this.formularioValido.emit((objetoSensor))
+  }
+  crear () {
+    this.sensorRestService.create(this.codigoSensor).subscribe(
+      resp=> {
+        console.log(resp)
+      }
+    )
+  }
 }

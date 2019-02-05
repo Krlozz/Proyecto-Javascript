@@ -10,8 +10,8 @@ import {ParcelaRestService} from "../../servicios/parcela-rest.service";
 export class RutaGestionParcelaComponent implements OnInit {
 
   parcela: ParcelaEjemplo = {
-    codigo: 'hacienda1',
-    medidas: 'direccion1',
+    codigo: 'codigo1',
+    medidas: 'medidas1',
 
   };
   constructor(private readonly parcelaRestService: ParcelaRestService) { }
@@ -22,13 +22,13 @@ export class RutaGestionParcelaComponent implements OnInit {
   crearParcela(parcelaObjeto){
     const crearParcela$ = this.parcelaRestService
       .create(
-        parcelaObjeto.codigo,
-        parcelaObjeto.medidas
+        parcelaObjeto.codigoParcela,
+        parcelaObjeto.medidasParcela
       );
     crearParcela$
       .subscribe(
         (parcela:Parcela) =>{
-          alert(`Parcela creada: ${parcela.codigo}`)
+          alert(`Parcela creada: ${parcela.codigoParcela}`)
         },
         (error) =>{
           console.log('Error: ', error)

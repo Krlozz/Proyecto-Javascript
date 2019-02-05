@@ -1,3 +1,38 @@
-<p>
-  formulario-gestion-sensor works!
-</p>
+<form #formularioCrearSensor="ngForm"
+      novalidate
+      (submit)="emitirFormularioValido(formularioCrearSensor)"
+>
+  <div>
+    <p *ngIf="inputNombre.errors">
+
+      <p-message
+        *ngIf="inputNombre.errors.required"
+        severity="warn"
+        text="Error: El nombre es requerido"></p-message>
+
+    </p>
+    <label [hidden]="true"
+           for="codigo">Codigo Subparcela</label>
+
+    <div class="ulinputgroup">
+      <input id="codigo"
+             pInputText
+             placeholder="Codigo Sensor"
+             required
+             type="text"
+             name="codigo"
+             [(ngModel)]="codigoSensor"
+             #inputNombre="ngModel"
+      >
+    </div>
+  </div>
+
+
+
+
+  <button [disabled]="formularioCrearSensor.invalid" (click)="crear()">
+    {{nombreBoton}}
+  </button>
+
+
+</form>
