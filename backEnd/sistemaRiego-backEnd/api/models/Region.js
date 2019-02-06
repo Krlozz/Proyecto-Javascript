@@ -9,16 +9,15 @@ module.exports = {
 
   attributes: {
 
-    nombreClima: {
+    nombreRegion: {
       type: 'string',
-      columnName: 'nombre_Clima',
+      columnName: 'nombre_Region',
       required: true
     },
 
-    direccionClima: {
+    descripcionRegion: {
       type: 'string',
-      columnName: 'direccion_Clima',
-      required: true
+      columnName: 'descripcion_Region'
     },
 
     haciendas: {
