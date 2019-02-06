@@ -12,6 +12,8 @@ export class FormularioGestionSubparcelaComponent implements OnInit {
   @Input()
   medidas:string;
   codigo:string;
+
+  idParcela:any;
   @Input()
   nombreBoton:string;
   @Output()
@@ -19,8 +21,13 @@ export class FormularioGestionSubparcelaComponent implements OnInit {
   medidasSubparcela:string;
   codigoSubparcela:string;
 
+  subparcela:any = {
+    id:''
+  }
+  idParcelaSubparcela:number;
 
-  constructor(public readonly subparcelaRestService : SubparcelaRestService){ }
+  constructor(public readonly subparcelaRestService : SubparcelaRestService
+  public readonly  parcelaRestServices:ParcelaRestService){ }
 
   ngOnInit() {
     this.medidasSubparcela= this.medidas;

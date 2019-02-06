@@ -16,6 +16,14 @@ module.exports = {
     return res.ok(nombreCac)
   },
   
+buscarPorNombre: async function(req, res){
+  const parametros= req.allParams();
+
+  var nombreCac = await Hacienda.find({
+    nombre: {'startsWith': parametros.nombre}
+  });
+  return res.ok(nombreCac)
+},
 
 };
 

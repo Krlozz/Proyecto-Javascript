@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RutaLoginComponent } from './rutas/ruta-login/ruta-login.component';
@@ -26,6 +25,15 @@ import { RutaActualizarHaciendaComponent } from './rutas/ruta-actualizar-haciend
 import {AuthService} from './servicios/rest/auth.service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { FormularioHaciendaComponent } from './componentes/formulario-hacienda/formulario-hacienda.component';
+import {HaciendaRestService} from "./servicios/hacienda-rest.service";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ButtonModule} from "primeng/button";
+import {TableModule} from "primeng/table";
+import {CardModule, ChartModule, InputTextModule, MessageModule, MessagesModule} from "primeng/primeng";
+
 import { FormularioUsuarioComponent } from './componentes/formulario-usuario/formulario-usuario.component';
 import { FormularioActualizarHaciendaComponent } from './componentes/formulario-actualizar-hacienda/formulario-actualizar-hacienda.component';
 import { FormularioActualizarUsuarioComponent } from './componentes/formulario-actualizar-usuario/formulario-actualizar-usuario.component';
@@ -35,6 +43,7 @@ import { FormularioGestionLecturaComponent } from './componentes/formulario-gest
 import { FormularioGestionSensorComponent } from './componentes/formulario-gestion-sensor/formulario-gestion-sensor.component';
 import { FormularioActualizarSensorComponent } from './componentes/formulario-actualizar-sensor/formulario-actualizar-sensor.component';
 import {UsuarioRestService} from './servicios/usuario-rest.service';
+
 import {ParcelaRestService} from "./servicios/parcela-rest.service";
 import {SubparcelaRestService} from "./servicios/subparcela-rest.service";
 import {SensorRestService} from "./servicios/sensor-rest.service";
@@ -43,6 +52,7 @@ import {FormularioHaciendaComponent} from "./componentes/formulario-hacienda/for
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HaciendaRestService} from "./servicios/hacienda-rest.service";
 import {CardModule, ChartModule, InputTextModule, MessageModule, MessagesModule} from 'primeng/primeng';
+
 
 @NgModule({
   declarations: [
@@ -67,6 +77,7 @@ import {CardModule, ChartModule, InputTextModule, MessageModule, MessagesModule}
     RutaUsuarioEncargadoComponent,
     RutaActualizarUsuarioComponent,
     RutaActualizarHaciendaComponent,
+
     FormularioHaciendaComponent,
     FormularioUsuarioComponent,
     FormularioActualizarHaciendaComponent,
@@ -76,15 +87,16 @@ import {CardModule, ChartModule, InputTextModule, MessageModule, MessagesModule}
     FormularioGestionLecturaComponent,
     FormularioGestionSensorComponent,
     FormularioActualizarSensorComponent
-  ],
+
+  ],  // Components
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+    HttpClientModule,  // Acceso a un servicio HttpClient
     FormsModule,
     BrowserAnimationsModule, // Animaciones
-    // ButtonModule,
-    // TableModule,
+    ButtonModule,
+    TableModule,
     InputTextModule,
     MessagesModule,
     MessageModule,
@@ -101,5 +113,6 @@ import {CardModule, ChartModule, InputTextModule, MessageModule, MessagesModule}
     RegionRestService
   ],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

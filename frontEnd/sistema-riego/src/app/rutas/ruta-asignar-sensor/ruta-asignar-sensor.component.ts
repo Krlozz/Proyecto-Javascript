@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {SensorRestService} from '../../servicios/sensor-rest.service';
 import {Sensor} from '../../interfaces/sensor';
 
+
 @Component({
   selector: 'app-ruta-asignar-sensor',
   templateUrl: './ruta-asignar-sensor.component.html',
@@ -18,7 +19,8 @@ export class RutaAsignarSensorComponent implements OnInit {
 
 
 
-  crearSensor(sensorObjeto) {
+
+  crearSensor(sensorObjeto){
     const crearSensor$ = this._sensorRestService
       .create(
         sensorObjeto.codigoSensor)
@@ -29,6 +31,7 @@ export class RutaAsignarSensorComponent implements OnInit {
         },
         (error) => {
           console.log('Error: ', error);
+
         }
       );
 
@@ -40,6 +43,7 @@ export class RutaAsignarSensorComponent implements OnInit {
   mostrarEnConsola(objeto) {
     console.log(objeto);
     console.log(objeto);
+
   }
 
 

@@ -3,6 +3,7 @@ import {UsuarioRestService} from '../../servicios/usuario-rest.service';
 import {HaciendaRestService} from '../../servicios/hacienda-rest.service';
 import {RegionRestService} from '../../servicios/region-rest.service';
 
+
 @Component({
   selector: 'app-formulario-usuario',
   templateUrl: './formulario-usuario.component.html',
@@ -52,6 +53,7 @@ export class FormularioUsuarioComponent implements OnInit {
   }
 
   emitirFormularioValido() {
+
     const objetoUsuario = {
       nombre:this.nombreUsuario,
       cedula:this.cedulaUsuario,
@@ -91,6 +93,7 @@ export class FormularioUsuarioComponent implements OnInit {
 
       }
     );
+
 
 
   }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Subparcela} from "../../interfaces/subparcela";
 import {SubparcelaRestService} from '../../servicios/subparcela-rest.service';
 
+
 @Component({
   selector: 'app-ruta-gestion-subparcela',
   templateUrl: './ruta-gestion-subparcela.component.html',
