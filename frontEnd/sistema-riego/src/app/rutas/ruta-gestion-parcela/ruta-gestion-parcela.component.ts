@@ -23,7 +23,9 @@ export class RutaGestionParcelaComponent implements OnInit {
     const crearParcela$ = this.parcelaRestService
       .create(
         parcelaObjeto.codigoParcela,
-        parcelaObjeto.medidasParcela
+        parcelaObjeto.medidasParcela,
+        parcelaObjeto.idUsuarioParcela,
+        parcelaObjeto.idHaciendaParcela
       );
     crearParcela$
       .subscribe(

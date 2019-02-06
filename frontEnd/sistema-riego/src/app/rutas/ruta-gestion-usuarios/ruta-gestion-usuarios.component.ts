@@ -21,7 +21,8 @@ export class RutaGestionUsuariosComponent implements OnInit {
         usuarioObjeto.cedulaUsuario,
         usuarioObjeto.passwordUsuario,
         usuarioObjeto.direccionUsuario,
-        usuarioObjeto.telefonoUsuario
+        usuarioObjeto.telefonoUsuario,
+        usuarioObjeto.idHaciendaUsuario
 
       );
     crearUsuario$

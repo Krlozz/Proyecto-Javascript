@@ -30,13 +30,17 @@ export class ParcelaRestService {
   }
 
   create(codigo: any,
-         medidas: any
+         medidas: any,
+         idHacienda:any,
+         idUsuario:any
 
   ) {
 
     const objetoAGuardar = {
       codigoParcela: codigo,
-      medidasParcela: medidas
+      medidasParcela: medidas,
+      idHaciendaParcela:idHacienda,
+      idUsuarioParcela:idUsuario
 
     };
 

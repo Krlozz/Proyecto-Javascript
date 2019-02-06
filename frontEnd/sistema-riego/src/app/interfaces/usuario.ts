@@ -5,5 +5,6 @@ export interface Usuario {
   telefonoUsuario:string
   direccionUsuario:string
   passwordUsuario:string
+  idHacienda:string
 
 }

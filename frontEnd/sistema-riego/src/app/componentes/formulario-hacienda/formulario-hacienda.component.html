@@ -50,7 +50,7 @@
 
   <div *ngIf="regiones" >
   <select  class="custom-select" id = idRegionHacienda name="idRegionHacienda" >
-    <option *ngFor="let region of regiones" [value]="region.id"  [(ngModel)]="Region.id">
+    <option *ngFor="let region of regiones" [value]="region.id" >
       {{region.nombreClima}}</option>
   </select>
   </div>

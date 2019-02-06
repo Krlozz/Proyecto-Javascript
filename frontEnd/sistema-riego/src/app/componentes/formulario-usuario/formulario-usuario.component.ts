@@ -1,5 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {UsuarioRestService} from "../../servicios/usuario-rest.service";
+import {HaciendaRestService} from "../../servicios/hacienda-rest.service";
+import {RegionRestService} from "../../servicios/region-rest.service";
 
 @Component({
   selector: 'app-formulario-usuario',
@@ -8,12 +10,16 @@ import {UsuarioRestService} from "../../servicios/usuario-rest.service";
 })
 export class FormularioUsuarioComponent implements OnInit {
 
+  usuarios = []
+  haciendas =[]
+
   @Input()
   nombre:string;
   cedula:string;
   direccion:string;
   telefono:string;
   password:string;
+  idHacienda:number
 
   @Input()
   nombreBoton:string;
@@ -24,10 +30,14 @@ export class FormularioUsuarioComponent implements OnInit {
   direccionUsuario:string;
   telefonoUsuario:string;
   passwordUsuario:string;
-
+  Hacienda:any = {
+    id:''
+  }
+  idHaciendaUsuario:number
 
   constructor(
-    public readonly usuarioRestService : UsuarioRestService) { }
+    public readonly usuarioRestService : UsuarioRestService,
+  public readonly haciendaRestService:HaciendaRestService) { }
 
   ngOnInit() {
     this.nombreUsuario= this.nombre;
@@ -35,6 +45,10 @@ export class FormularioUsuarioComponent implements OnInit {
     this.direccionUsuario= this.direccion;
     this.telefonoUsuario= this.telefono
     this.passwordUsuario= this.password
+    this.idHaciendaUsuario= this.idHacienda
+    this.findAll()
+    this.findAllHaciendas()
+
   }
 
   emitirFormularioValido(){
@@ -43,16 +57,41 @@ export class FormularioUsuarioComponent implements OnInit {
       cedula:this.cedulaUsuario,
       direccion:this.direccionUsuario,
       telefono:this.telefonoUsuario,
-      password:this.passwordUsuario
+      password:this.passwordUsuario,
+      idHacienda:this.idHaciendaUsuario
     };
     this.formularioValido.emit((objetoUsuario))
   }
   crear () {
     this.usuarioRestService.create(this.nombreUsuario, this.cedulaUsuario,
-      this.direccionUsuario, this.telefonoUsuario, this.passwordUsuario).subscribe(
+      this.direccionUsuario, this.telefonoUsuario, this.passwordUsuario, this.idHaciendaUsuario).subscribe(
       resp=> {
         console.log(resp)
       }
     )
+  }
+
+
+  findAll(){
+    this.usuarioRestService.findAll().subscribe(
+      resp =>{
+        console.log(resp)
+        this.usuarios=resp
+
+      }
+    )
+
+
+  }
+  findAllHaciendas(){
+    this.haciendaRestService.findAll().subscribe(
+      resp =>{
+        console.log(resp)
+        this.haciendas=resp
+
+      }
+    )
+
+
   }
 }
