@@ -1,3 +1,8 @@
-<p>
-  ruta-asignar-sensor works!
-</p>
+<h2>Crear Sensor</h2>
+
+<p>Cree Sensor</p>
+<app-formulario-gestion-sensor
+  [nombreBoton]="'Crear'"
+  (formularioValido)="crearSensor($event)"
+>
+</app-formulario-gestion-sensor>

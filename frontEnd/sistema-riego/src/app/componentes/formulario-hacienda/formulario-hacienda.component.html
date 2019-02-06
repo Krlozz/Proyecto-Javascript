@@ -1,0 +1,115 @@
+<form #formularioCrearHacienda="ngForm"
+      novalidate
+      (submit)="emitirFormularioValido(formularioCrearHacienda)"
+>
+  <div>
+    <p *ngIf="inputNombre.errors">
+
+      <p-message
+        *ngIf="inputNombre.errors.required"
+        severity="warn"
+        text="Error: El nombre es requerido"></p-message>
+
+    </p>
+    <label [hidden]="true"
+           for="nombreHacienda">Nombre Hacienda</label>
+
+    <div class="ulinputgroup">
+      <input id="nombreHacienda"
+             pInputText
+             placeholder="Nombre Hacienda"
+             required
+             type="text"
+             name="nombreHacienda"
+             [(ngModel)]="nombreHacienda"
+             #inputNombre="ngModel"
+      >
+    </div>
+  </div>
+  <div>
+    <label for ="direccionHacienda">
+
+    </label>
+    <input id="direccionHacienda"
+           name="direccionHacienda"
+           placeholder="Direccion Hacienda"
+           type="text"
+           [(ngModel)]="direccionHacienda">
+  </div>
+
+  <div>
+    <label for ="telefonoHacienda">
+
+    </label>
+    <input id="telefonoHacienda"
+           name="telefono"
+           placeholder="Telefono Hacienda"
+           type="text"
+           [(ngModel)]="telefonoHacienda">
+  </div>
+
+  <div *ngIf="regiones" >
+  <select  class="custom-select" id = idRegionHacienda name="idRegionHacienda" >
+    <option *ngFor="let region of regiones" [value]="region.id" >
+      {{region.nombreClima}}</option>
+  </select>
+  </div>
+
+  <button [disabled]="formularioCrearHacienda.invalid" (click)="crear()">
+    {{nombreBoton}}
+  </button>
+  <button [disabled]="formularioCrearHacienda.invalid" >
+    {{nombreBoton1}}
+  </button>
+
+
+
+
+</form>
+
+<table *ngIf="haciendas">
+  <table class="table table-hover animated fadeInUp">
+    <caption>Lista de Haciendas</caption>
+    <!-- tr -> table row -->
+    <thead>
+    <tr>
+      <!-- th -> table header -->
+      <th width="30%">Nombre</th>
+      <th width="50%">Direccion</th>
+
+      <th width="20%">Telefono</th>
+    </tr>
+    </thead>
+    <!-- tr -> table row -->
+    <tbody *ngFor="let hacienda of haciendas">
+
+    <tr>
+
+      <td>{{hacienda.nombreHacienda}} </td>
+      <td>{{hacienda.direccionHacienda}}</td>
+      <td>{{hacienda.telefonoHacienda}}</td>
+
+      <td>
+        <form action="/Hacienda/borrar/<%= hacienda.id %>"
+              method="post"
+        >
+          <!--<button type="button">Yo no</button>-->
+          <!--<button>Yo si</button>-->
+          <button type="submit"
+                  class="btn btn-outline-danger btn-block btn-espaciado"
+                  onclick="borrar(event)">Eliminar
+          </button>
+        </form>
+        <a class="quitar-decoracion" href="/Hacienda/actualizar-hacienda/<%= hacienda.id %>">
+          <button class="btn btn-outline-info btn-block btn-espaciado"
+                  type="button">
+            Actualizar
+          </button>
+        </a>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+
+</table>

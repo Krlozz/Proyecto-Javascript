@@ -3,3 +3,105 @@
 </p>
 
 <router-outlet></router-outlet>
+
+
+<div style="background-image: url('http://www.solofondosdepantalla.net/fondos-de-pantalla/Abstractos/Fondo-de-pantalla-Abstracto-210.jpg')">
+  <div class="container" >
+    <br><br>
+    <div class="col-2" style="text-align: left">
+      <img class="img-fluid" src="/assets/imagenes/01-logo-epn.png"  alt="">
+    </div>
+
+    <div class="col-10">    </div>
+
+
+    <br><br>
+
+  </div>
+</div>
+<br>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-4">    </div>
+
+    <div class="col-6" style="text-align: right">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" routerLink="/inicio" role="tab" aria-controls="nav-home" aria-selected="false">Home</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" routerLink="/acerca" role="tab" aria-controls="nav-profile" aria-selected="false">Acerca</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" routerLink="/contactanos" role="tab" aria-controls="nav-contact" aria-selected="false">Contáctanos</a>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"></div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"></div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"></div>
+      </div>
+    </div>
+
+    <div class="col-2" style="text-align: right" align="right">
+      <button type="button" class="btn btn-dark" routerLink="/login">Iniciar Sesión</button>
+    </div>
+
+  </div>
+</div>
+<hr style="border-width:3px;border-color: black">
+<br>
+
+<br><br><br>
+
+
+
+
+
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <h1 class="fadeIn first">Iniciar Sesión</h1>
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <!--   <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon"/>-->
+    </div>
+
+    <!-- Login Form -->
+    <form (submit)="login()">
+      <input type="text"
+             id="cedulaUsuario"
+             class="fadeIn second"
+             name="cedulaUsuario"
+             placeholder="Cédula del usario"
+             [(ngModel)]="usuario.cedulaUsuario">
+
+      <input type="password"
+             id="contraseña"
+             class="fadeIn third"
+             name="contraseña"
+             placeholder="Contraseña"
+             [(ngModel)]="usuario.password">
+
+      <!--<select class="form-control-sm fadeIn fourth">-->
+        <!--<option value="administrador">Administrador</option>-->
+        <!--<option value="encargado">Encargado</option>-->
+      <!--</select>-->
+      <br>
+      <br>
+
+      <button class="btn btn-outline-info btn-espaciado fadeIn fourth">
+              <!--onclick="validarNombre(event)"-->Iniciar Sesión
+      </button>
+
+
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <!--    <a class="underlineHover" href="#">Forgot Password?</a>-->
+    </div>
+
+  </div>
+</div>
