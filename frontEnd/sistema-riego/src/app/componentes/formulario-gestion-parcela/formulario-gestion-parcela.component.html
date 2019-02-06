@@ -1,0 +1,101 @@
+<form #formularioCrearParcela="ngForm"
+      novalidate
+      (submit)="emitirFormularioValido(formularioCrearParcela)"
+>
+  <div>
+    <p *ngIf="inputNombre.errors">
+
+      <p-message
+        *ngIf="inputNombre.errors.required"
+        severity="warn"
+        text="Error: El nombre es requerido"></p-message>
+
+    </p>
+    <label [hidden]="true"
+           for="codigoParcela">Codigo Parcela</label>
+
+    <div class="ulinputgroup">
+      <input id="codigoParcela"
+             pInputText
+             placeholder="Codigo Parcela"
+             required
+             type="text"
+             name="codigoParcela"
+             [(ngModel)]="codigoParcela"
+             #inputNombre="ngModel"
+      >
+    </div>
+  </div>
+  <div>
+    <label for ="medidasParcela">
+
+    </label>
+    <input id="medidasParcela"
+           name="medidasParcela"
+           placeholder="Medidas Parcela"
+           type="text"
+           [(ngModel)]="medidasParcela">
+  </div>
+  <div *ngIf="haciendas" >
+    <select  class="custom-select" id = idHaciendaParcela name="idHaciendaParcela" >
+      <option *ngFor="let hacienda of haciendas" [value]="hacienda.id" >
+        {{hacienda.nombreHacienda}}</option>
+    </select>
+  </div>
+  <div *ngIf="usuarios" >
+    <select  class="custom-select" id = idUsuarioParcela name="idUsuarioParcela" >
+      <option *ngFor="let usuario of usuarios" [value]="usuario.id" >
+        {{usuario.nombreUsuario}}</option>
+    </select>
+  </div>
+
+
+  <button [disabled]="formularioCrearParcela.invalid"  (click)="crear()">
+    {{nombreBoton}}
+  </button>
+
+</form>
+<table *ngIf="haciendas">
+  <table class="table table-hover animated fadeInUp">
+    <caption>Lista de Haciendas</caption>
+    <!-- tr -> table row -->
+    <thead>
+    <tr>
+      <!-- th -> table header -->
+      <th width="30%">Código</th>
+      <th width="50%">Medidas</th>
+
+    </tr>
+    </thead>
+    <!-- tr -> table row -->
+    <tbody *ngFor="let parcela of parcelas">
+
+    <tr>
+
+      <td>{{parcela.codigoParcela}} </td>
+      <td>{{parcela.medidasParcela}}</td>
+
+      <td>
+        <form action="/Hacienda/borrar/<%= hacienda.id %>"
+              method="post"
+        >
+          <!--<button type="button">Yo no</button>-->
+          <!--<button>Yo si</button>-->
+          <button type="submit"
+                  class="btn btn-outline-danger btn-block btn-espaciado"
+                  onclick="borrar(event)">Eliminar
+          </button>
+        </form>
+        <a class="quitar-decoracion" href="/Hacienda/actualizar-hacienda/<%= hacienda.id %>">
+          <button class="btn btn-outline-info btn-block btn-espaciado"
+                  type="button">
+            Actualizar
+          </button>
+        </a>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+
+</table>

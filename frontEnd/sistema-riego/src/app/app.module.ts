@@ -23,6 +23,9 @@ import { RutaUsuarioAdministradorComponent } from './rutas/ruta-usuario-administ
 import { RutaUsuarioEncargadoComponent } from './rutas/ruta-usuario-encargado/ruta-usuario-encargado.component';
 import { RutaActualizarUsuarioComponent } from './rutas/ruta-actualizar-usuario/ruta-actualizar-usuario.component';
 import { RutaActualizarHaciendaComponent } from './rutas/ruta-actualizar-hacienda/ruta-actualizar-hacienda.component';
+import {AuthService} from './servicios/rest/auth.service';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -46,13 +49,15 @@ import { RutaActualizarHaciendaComponent } from './rutas/ruta-actualizar-haciend
     RutaUsuarioAdministradorComponent,
     RutaUsuarioEncargadoComponent,
     RutaActualizarUsuarioComponent,
-    RutaActualizarHaciendaComponent
+    RutaActualizarHaciendaComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

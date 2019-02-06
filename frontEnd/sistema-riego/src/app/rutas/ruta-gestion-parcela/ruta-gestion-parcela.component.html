@@ -1,3 +1,8 @@
-<p>
-  ruta-gestion-parcela works!
-</p>
+<h2>Gestione Parcela</h2>
+
+<p>Cree haciendas</p>
+<app-formulario-gestion-parcela
+  [nombreBoton]="'Crear'"
+  (formularioValido)="crearParcela($event)"
+>
+</app-formulario-gestion-parcela>

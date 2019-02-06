@@ -20,6 +20,7 @@
   </div>
 </div>
 <br>
+
 <div class="container">
   <div class="row">
 
@@ -68,19 +69,30 @@
     </div>
 
     <!-- Login Form -->
-    <form href="/Login/login" method="post">
-      <input type="text" id="cedula" class="fadeIn second" name="cedula" placeholder="Cédula">
-      <input type="password" id="contraseña" class="fadeIn third" name="contraseña" placeholder="Contraseña">
+    <form (submit)="login()">
+      <input type="text"
+             id="cedulaUsuario"
+             class="fadeIn second"
+             name="cedulaUsuario"
+             placeholder="Cédula del usario"
+             [(ngModel)]="usuario.cedulaUsuario">
 
-      <select class="form-control-sm fadeIn fourth">
-        <option value="administrador">Administrador</option>
-        <option value="encargado">Encargado</option>
-      </select>
+      <input type="password"
+             id="contraseña"
+             class="fadeIn third"
+             name="contraseña"
+             placeholder="Contraseña"
+             [(ngModel)]="usuario.password">
+
+      <!--<select class="form-control-sm fadeIn fourth">-->
+        <!--<option value="administrador">Administrador</option>-->
+        <!--<option value="encargado">Encargado</option>-->
+      <!--</select>-->
       <br>
       <br>
 
-      <button class="btn btn-outline-info btn-espaciado fadeIn fourth"
-              onclick="validarNombre(event)">Iniciar Sesión
+      <button class="btn btn-outline-info btn-espaciado fadeIn fourth">
+              <!--onclick="validarNombre(event)"-->Iniciar Sesión
       </button>
 
 

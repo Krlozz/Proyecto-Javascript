@@ -1,0 +1,46 @@
+<form #formularioCrearSubparcela="ngForm"
+      novalidate
+      (submit)="emitirFormularioValido(formularioCrearSubparcela)"
+>
+  <div>
+    <p *ngIf="inputNombre.errors">
+
+      <p-message
+        *ngIf="inputNombre.errors.required"
+        severity="warn"
+        text="Error: El nombre es requerido"></p-message>
+
+    </p>
+    <label [hidden]="true"
+           for="codigo">Codigo Subparcela</label>
+
+    <div class="ulinputgroup">
+      <input id="codigo"
+             pInputText
+             placeholder="Codigo Subarcela"
+             required
+             type="text"
+             name="codigo"
+             [(ngModel)]="codigoSubparcela"
+             #inputNombre="ngModel"
+      >
+    </div>
+  </div>
+  <div>
+    <label for ="medidas">
+
+    </label>
+    <input id="medidas"
+           name="medidas"
+           placeholder="Medidas Parcela"
+           type="text"
+           [(ngModel)]="medidasSubparcela">
+  </div>
+
+
+
+  <button [disabled]="formularioCrearSubparcela.invalid" (click)="crear()">
+    {{nombreBoton}}
+  </button>
+
+</form>
