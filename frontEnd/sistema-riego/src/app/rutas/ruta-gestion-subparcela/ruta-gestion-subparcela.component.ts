@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {Subparcela} from "../../interfaces/subparcela";
-import {SubparcelaRestService} from "../../servicios/subparcela-rest.service";
+import {SubparcelaRestService} from '../../servicios/subparcela-rest.service';
 
 @Component({
   selector: 'app-ruta-gestion-subparcela',
   templateUrl: './ruta-gestion-subparcela.component.html',
-  styleUrls: ['./ruta-gestion-subparcela.component.scss']
+  styleUrls: ['./ruta-gestion-subparcela.component.css']
 })
 export class RutaGestionSubparcelaComponent implements OnInit {
 

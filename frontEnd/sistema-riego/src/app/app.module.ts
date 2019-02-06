@@ -25,7 +25,24 @@ import { RutaActualizarUsuarioComponent } from './rutas/ruta-actualizar-usuario/
 import { RutaActualizarHaciendaComponent } from './rutas/ruta-actualizar-hacienda/ruta-actualizar-hacienda.component';
 import {AuthService} from './servicios/rest/auth.service';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from '@angular/forms';
+import { FormularioUsuarioComponent } from './componentes/formulario-usuario/formulario-usuario.component';
+import { FormularioActualizarHaciendaComponent } from './componentes/formulario-actualizar-hacienda/formulario-actualizar-hacienda.component';
+import { FormularioActualizarUsuarioComponent } from './componentes/formulario-actualizar-usuario/formulario-actualizar-usuario.component';
+import { FormularioGestionParcelaComponent } from './componentes/formulario-gestion-parcela/formulario-gestion-parcela.component';
+import { FormularioGestionSubparcelaComponent } from './componentes/formulario-gestion-subparcela/formulario-gestion-subparcela.component';
+import { FormularioGestionLecturaComponent } from './componentes/formulario-gestion-lectura/formulario-gestion-lectura.component';
+import { FormularioGestionSensorComponent } from './componentes/formulario-gestion-sensor/formulario-gestion-sensor.component';
+import { FormularioActualizarSensorComponent } from './componentes/formulario-actualizar-sensor/formulario-actualizar-sensor.component';
+import {UsuarioRestService} from './servicios/usuario-rest.service';
+import {ParcelaRestService} from "./servicios/parcela-rest.service";
+import {SubparcelaRestService} from "./servicios/subparcela-rest.service";
+import {SensorRestService} from "./servicios/sensor-rest.service";
+import {RegionRestService} from "./servicios/region-rest.service";
+import {FormularioHaciendaComponent} from "./componentes/formulario-hacienda/formulario-hacienda.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {HaciendaRestService} from "./servicios/hacienda-rest.service";
+import {CardModule, ChartModule, InputTextModule, MessageModule, MessagesModule} from 'primeng/primeng';
 
 @NgModule({
   declarations: [
@@ -50,14 +67,39 @@ import {FormsModule} from "@angular/forms";
     RutaUsuarioEncargadoComponent,
     RutaActualizarUsuarioComponent,
     RutaActualizarHaciendaComponent,
+    FormularioHaciendaComponent,
+    FormularioUsuarioComponent,
+    FormularioActualizarHaciendaComponent,
+    FormularioActualizarUsuarioComponent,
+    FormularioGestionParcelaComponent,
+    FormularioGestionSubparcelaComponent,
+    FormularioGestionLecturaComponent,
+    FormularioGestionSensorComponent,
+    FormularioActualizarSensorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule, // Animaciones
+    // ButtonModule,
+    // TableModule,
+    InputTextModule,
+    MessagesModule,
+    MessageModule,
+    CardModule,
+    ChartModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    HaciendaRestService,
+    UsuarioRestService,
+    ParcelaRestService,
+    SubparcelaRestService,
+    SensorRestService,
+    RegionRestService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
