@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="618a0b94-a331-4186-b8d9-da756ff8d19f" name="Default Changelist" comment="">
+
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/frontEnd/sistema-riego/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/sistema-riego/.gitignore" afterDir="false" />
+
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +23,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-gestion-subparcela/ruta-gestion-subparcela.component.ts">
           <provider selected="true" editor-type-id="text-editor">
+
             <state relative-caret-position="161">
               <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -60,6 +65,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="669">
               <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
+
             </state>
           </provider>
         </entry>
@@ -78,6 +84,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="10" selection-start-column="10" selection-end-column="10" />
+
             </state>
           </provider>
         </entry>
@@ -111,6 +118,7 @@
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
+
             </state>
           </provider>
         </entry>
@@ -176,6 +184,12 @@
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
@@ -204,6 +218,7 @@
               <item name="Proyecto-Javascript" type="462c0819:PsiDirectoryNode" />
               <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
             </path>
+
           </expand>
           <select />
         </subPane>
@@ -220,6 +235,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+
     <property name="ts.external.directory.path" value="C:\Users\Krlozz\Documents\GitHub\Javascript\ayala-tipan-carlos-antonio\Proyecto-Javascript\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -234,6 +250,7 @@
       <recent name="C:\Users\Krlozz\Documents\GitHub\Javascript\ayala-tipan-carlos-antonio\Proyecto-Javascript\frontEnd\sistema-riego\src\app\rutas\ruta-gestion-parcela" />
       <recent name="C:\Users\Krlozz\Documents\GitHub\Javascript\ayala-tipan-carlos-antonio\Proyecto-Javascript\frontEnd\sistema-riego\src\app\rutas\ruta-gestion-hacienda" />
     </key>
+
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -278,6 +295,7 @@
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12473348" />
+
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -292,6 +310,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49947312" weight="0.3199554" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50052685" side_tool="true" weight="0.3199554" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
+
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24945295" />
@@ -412,6 +431,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/servicios/rest/auth.service.ts">
+
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
@@ -667,6 +687,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Sensor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="19" selection-end-column="6" />
         </state>
       </provider>
     </entry>
