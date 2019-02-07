@@ -9,9 +9,10 @@ module.exports = {
 
   login: async (req, res) => {
     const parametros = req.allParams();
+    console.log(parametros,'lkjhgfd')
 
     var usuarioLogeado = await Usuario.find({
-      cedulaUsuario: parametros.cedulaUsuario,
+      cedulaUsuario: parametros.username,
       password: parametros.password,
     });
 

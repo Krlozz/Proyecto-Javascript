@@ -85,6 +85,13 @@
   </div>
   <br>
 
+  <div *ngIf="todosRoles">
+    <select class="form-control-sm fadeIn fourth">
+      <option *ngFor="let rol of todosRoles" > {{ rol.nombreRol }}</option>
+    </select>
+  </div>
+
+
   <div class="trans text-center">
     <button class="btn btn-secondary btn-lg active" [disabled]="formularioCrearUsuario.invalid" (click)="crear()">
       {{nombreBoton}}

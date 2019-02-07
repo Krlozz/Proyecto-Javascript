@@ -2,6 +2,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {UsuarioRestService} from '../../servicios/usuario-rest.service';
 import {HaciendaRestService} from '../../servicios/hacienda-rest.service';
 import {RegionRestService} from '../../servicios/region-rest.service';
+import {AuthService} from "../../servicios/rest/auth.service";
+import {RolRestService} from "../../servicios/rol-rest.service";
 
 
 @Component({
@@ -36,9 +38,12 @@ export class FormularioUsuarioComponent implements OnInit {
   }
   idHaciendaUsuario: number
 
+  todosRoles: any;
+
   constructor(
     public readonly usuarioRestService: UsuarioRestService,
-    public readonly haciendaRestService: HaciendaRestService) { }
+    public readonly haciendaRestService: HaciendaRestService,
+    private readonly _rolService: RolRestService) { }
 
   ngOnInit() {
     this.nombreUsuario = this.nombre;
@@ -49,6 +54,23 @@ export class FormularioUsuarioComponent implements OnInit {
     this.idHaciendaUsuario = this.idHacienda;
     this.findAll();
     this.findAllHaciendas();
+    this.obtenerRoles();
+  }
+
+  obtenerRoles() {
+
+    this._rolService.obtnerRoles().subscribe(
+      roles => {
+        this.todosRoles = roles;
+        // console.log(roles);
+      }
+
+    );
+  }
+
+
+
+  rolesXUser() {
 
   }
 

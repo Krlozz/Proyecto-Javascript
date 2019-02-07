@@ -27,14 +27,14 @@ export class AuthService {
 
   }
 
-  login(username: string,
+  login(cedulaUsuario: string,
         password: string): Observable<Usuario> {
 
     const url = environment.url + '/usuario/login';
 
     return this._httpClient
       .post(url, {
-        username,
+        cedulaUsuario,
         password
       })
       .pipe(map(r => r as Usuario)); // Casteo

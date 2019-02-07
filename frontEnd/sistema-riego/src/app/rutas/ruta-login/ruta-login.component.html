@@ -78,10 +78,13 @@
              placeholder="Contraseña"
              [(ngModel)]="usuario.password">
 
-      <!--<select class="form-control-sm fadeIn fourth">-->
-        <!--<option value="administrador">Administrador</option>-->
-        <!--<option value="encargado">Encargado</option>-->
-      <!--</select>-->
+      <br>
+      <div *ngIf="todosRoles">
+        <select class="form-control-sm fadeIn fourth">
+          <option *ngFor="let rol of todosRoles" > {{ rol.nombreRol }}</option>
+        </select>
+      </div>
+
       <br>
       <br>
 

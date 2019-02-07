@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../../servicios/rest/auth.service';
+import {RolRestService} from '../../servicios/rol-rest.service';
 
 @Component({
   selector: 'app-ruta-login',
@@ -10,16 +11,32 @@ export class RutaLoginComponent implements OnInit {
 
   usuario = {
     cedulaUsuario: '',
-    password: ''
+    password: '',
+    rol: ''
   };
 
-  constructor(private readonly _authService: AuthService) { }
+  constructor(private readonly _authService: AuthService, private readonly _rolService: RolRestService) { }
+
+  todosRoles: any;
+
 
   ngOnInit() {
+    this.obtenerRoles();
+  }
+
+  obtenerRoles() {
+
+    this._rolService.obtnerRoles().subscribe(
+      roles => {
+        this.todosRoles = roles;
+        // console.log(roles);
+      }
+
+    );
   }
 
   login() {
-
+    console.log(this.usuario.rol);
     const respuestaLogin$ = this._authService
       .login(
         this.usuario.cedulaUsuario,
