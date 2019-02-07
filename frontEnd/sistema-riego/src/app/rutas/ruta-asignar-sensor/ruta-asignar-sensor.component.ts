@@ -23,7 +23,8 @@ export class RutaAsignarSensorComponent implements OnInit {
   crearSensor(sensorObjeto){
     const crearSensor$ = this._sensorRestService
       .create(
-        sensorObjeto.codigoSensor)
+        sensorObjeto.codigoSensor,
+        sensorObjeto.idSubparcela)
     crearSensor$
       .subscribe(
         (sensor: Sensor) => {
@@ -45,8 +46,5 @@ export class RutaAsignarSensorComponent implements OnInit {
     console.log(objeto);
 
   }
-
-
-
 
 }

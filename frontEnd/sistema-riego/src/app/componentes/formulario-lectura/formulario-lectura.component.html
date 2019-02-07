@@ -3,35 +3,13 @@
       (submit)="emitirFormularioValido(formularioLectura)"
 
 >
-  <div>
-    <p *ngIf="inputNombre.errors">
 
-      <p-message
-        *ngIf="inputNombre.errors.required"
-        severity="warn"
-        text="Error: El nombre es requerido"></p-message>
-
-    </p>
-    <label [hidden]="true"
-           for="nombreHacienda">Nombre Hacienda</label>
-
-    <div class="ulinputgroup">
-      <input id="nombreHacienda"
-             pInputText
-             placeholder="Nombre Hacienda"
-             required
-             type="text"
-             name="nombreHacienda"
-             [(ngModel)]="nombreHacienda"
-             #inputNombre="ngModel"
-      >
-    </div>
-  </div>
+  <br>
 
 
 </form>
 
-<table *ngIf="lecturas">
+<table *ngIf="lecturas" align="center">
   <table class="table table-hover animated fadeInUp">
     <caption>Lista de Lecturas</caption>
     <!-- tr -> table row -->
@@ -75,3 +53,5 @@
   </table>
 
 </table>
+
+<br><br><br><br>

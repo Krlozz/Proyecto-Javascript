@@ -29,11 +29,13 @@ export class SensorRestService {
       .pipe(map(r => <Sensor> r)); // Castear
   }
 
-  create(codigo: any) {
+  create(codigo: any,
+         idSubparcela:any) {
 
 
     const objetoAGuardar = {
-      codigoSensor: codigo
+      codigoSensor: codigo,
+      idSubparcelaSensor:idSubparcela
     };
 
     const url = environment.url + this.nombreModelo;
@@ -79,17 +81,3 @@ export class SensorRestService {
 // fbi.gov.us -> 192.220.1.5
 
 // CORS -> Navegador
-
-
-
-
-
-
-
-
-
-
-
-
-
-
