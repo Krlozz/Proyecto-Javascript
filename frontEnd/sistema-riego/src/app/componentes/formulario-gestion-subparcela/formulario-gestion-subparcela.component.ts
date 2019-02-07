@@ -26,7 +26,7 @@ export class FormularioGestionSubparcelaComponent implements OnInit {
   }
   idParcelaSubparcela:number;
 
-  constructor(public readonly subparcelaRestService : SubparcelaRestService
+  constructor(public readonly subparcelaRestService : SubparcelaRestService,
   public readonly  parcelaRestServices:ParcelaRestService){ }
 
   ngOnInit() {

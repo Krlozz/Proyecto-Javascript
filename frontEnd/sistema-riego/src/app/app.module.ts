@@ -23,16 +23,14 @@ import { RutaUsuarioEncargadoComponent } from './rutas/ruta-usuario-encargado/ru
 import { RutaActualizarUsuarioComponent } from './rutas/ruta-actualizar-usuario/ruta-actualizar-usuario.component';
 import { RutaActualizarHaciendaComponent } from './rutas/ruta-actualizar-hacienda/ruta-actualizar-hacienda.component';
 import {AuthService} from './servicios/rest/auth.service';
+import { FormularioHaciendaComponent } from './componentes/formulario-hacienda/formulario-hacienda.component';
+import {HaciendaRestService} from './servicios/hacienda-rest.service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-import { FormularioHaciendaComponent } from './componentes/formulario-hacienda/formulario-hacienda.component';
-import {HaciendaRestService} from "./servicios/hacienda-rest.service";
-import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {ButtonModule} from "primeng/button";
-import {TableModule} from "primeng/table";
-import {CardModule, ChartModule, InputTextModule, MessageModule, MessagesModule} from "primeng/primeng";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ButtonModule} from 'primeng/button';
+import {TableModule} from 'primeng/table';
+import {CardModule, ChartModule, InputTextModule, MessageModule, MessagesModule} from 'primeng/primeng';
 
 import { FormularioUsuarioComponent } from './componentes/formulario-usuario/formulario-usuario.component';
 import { FormularioActualizarHaciendaComponent } from './componentes/formulario-actualizar-hacienda/formulario-actualizar-hacienda.component';
@@ -44,14 +42,10 @@ import { FormularioGestionSensorComponent } from './componentes/formulario-gesti
 import { FormularioActualizarSensorComponent } from './componentes/formulario-actualizar-sensor/formulario-actualizar-sensor.component';
 import {UsuarioRestService} from './servicios/usuario-rest.service';
 
-import {ParcelaRestService} from "./servicios/parcela-rest.service";
-import {SubparcelaRestService} from "./servicios/subparcela-rest.service";
-import {SensorRestService} from "./servicios/sensor-rest.service";
-import {RegionRestService} from "./servicios/region-rest.service";
-import {FormularioHaciendaComponent} from "./componentes/formulario-hacienda/formulario-hacienda.component";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {HaciendaRestService} from "./servicios/hacienda-rest.service";
-import {CardModule, ChartModule, InputTextModule, MessageModule, MessagesModule} from 'primeng/primeng';
+import {ParcelaRestService} from './servicios/parcela-rest.service';
+import {SubparcelaRestService} from './servicios/subparcela-rest.service';
+import {SensorRestService} from './servicios/sensor-rest.service';
+import {RegionRestService} from './servicios/region-rest.service';
 
 
 @NgModule({

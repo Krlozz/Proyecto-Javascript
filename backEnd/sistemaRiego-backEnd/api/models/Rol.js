@@ -19,7 +19,7 @@ module.exports = {
       columnName: 'nombre_Rol'
     },
 
-    direccionRol: {
+    descripcionRol: {
       type: 'string',
       columnName: 'direccion_Rol',
       required: true
