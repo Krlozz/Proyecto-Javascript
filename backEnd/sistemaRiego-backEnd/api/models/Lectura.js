@@ -14,6 +14,11 @@ module.exports = {
       columnName: 'fecha_Lectura',
       required: true
     },
+    descripcion: {
+      type: 'string',
+      columnName: 'descripcion',
+      required: true
+    },
 
     idSensor: {
       model: 'Sensor' // Modelo Papa

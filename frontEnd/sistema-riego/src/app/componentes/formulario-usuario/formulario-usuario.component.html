@@ -15,7 +15,8 @@
            for="nombreUsuario">Nombre Usuario</label>
 
     <div class="ulinputgroup">
-      <input id="nombreUsuario"
+      <input class="form-control"
+             id="nombreUsuario"
              pInputText
              placeholder="Nombre Usuario"
              required
@@ -25,22 +26,26 @@
              #inputNombre="ngModel"
       >
     </div>
+
   </div>
   <div>
     <label for ="cedulaUsuario">
 
     </label>
-    <input id="cedulaUsuario"
+    <input class="form-control"
+           id="cedulaUsuario"
            name="cedulaUsuario"
            placeholder="Cedula Usuario"
            type="text"
            [(ngModel)]="cedulaUsuario">
   </div>
+
   <div>
     <label for ="direccionUsuario">
 
     </label>
-    <input id="direccionUsuario"
+    <input class="form-control"
+           id="direccionUsuario"
            name="direccionUsuario"
            placeholder="Direccion Usuario"
            type="text"
@@ -51,22 +56,26 @@
     <label for ="telefonoUsuario">
 
     </label>
-    <input id="telefonoUsuario"
+    <input class="form-control"
+           id="telefonoUsuario"
            name="telefonoUsuario"
            placeholder="Telefono Usuario"
            type="text"
            [(ngModel)]="telefonoUsuario">
   </div>
+
   <div>
     <label for ="passwordUsuario">
 
     </label>
-    <input id="passwordUsuario"
+    <input class="form-control"
+           id="passwordUsuario"
            name="passwordUsuario"
-           placeholder="password Usuario"
+           placeholder="Password Usuario"
            type="text"
            [(ngModel)]="passwordUsuario">
   </div>
+  <br>
 
   <div *ngIf="haciendas" >
     <select  class="custom-select" id = idHaciendaUsuario name="idHaciendaUsuario" >
@@ -74,14 +83,19 @@
         {{hacienda.nombreHacienda}}</option>
     </select>
   </div>
+  <br>
 
-  <button [disabled]="formularioCrearUsuario.invalid" (click)="crear()">
-    {{nombreBoton}}
-  </button>
+  <div class="trans text-center">
+    <button class="btn btn-secondary btn-lg active" [disabled]="formularioCrearUsuario.invalid" (click)="crear()">
+      {{nombreBoton}}
+    </button>
+  </div>
+
+  <br><br><br>
 
 </form>
 
-<table *ngIf="usuarios">
+<table *ngIf="usuarios" align="center">
   <table class="table table-hover animated fadeInUp">
     <caption>Lista de Haciendas</caption>
     <!-- tr -> table row -->
@@ -127,3 +141,6 @@
 
     </tbody>
   </table>
+</table>
+
+<br><br><br><br>

@@ -15,7 +15,8 @@
            for="nombreHacienda">Nombre Hacienda</label>
 
     <div class="ulinputgroup">
-      <input id="nombreHacienda"
+      <input class="form-control"
+             id="nombreHacienda"
              pInputText
              placeholder="Nombre Hacienda"
              required
@@ -30,7 +31,8 @@
     <label for ="direccionHacienda">
 
     </label>
-    <input id="direccionHacienda"
+    <input class="form-control"
+           id="direccionHacienda"
            name="direccionHacienda"
            placeholder="Direccion Hacienda"
            type="text"
@@ -41,33 +43,40 @@
     <label for ="telefonoHacienda">
 
     </label>
-    <input id="telefonoHacienda"
+    <input class="form-control"
+           id="telefonoHacienda"
            name="telefono"
            placeholder="Telefono Hacienda"
            type="text"
            [(ngModel)]="telefonoHacienda">
   </div>
 
+  <br>
+
   <div *ngIf="regiones" >
-  <select  class="custom-select" id = idRegionHacienda name="idRegionHacienda" >
-    <option *ngFor="let region of regiones" [value]="region.id" >
-      {{region.nombreClima}}</option>
-  </select>
+    <select  class="custom-select" id = idRegionHacienda name="idRegionHacienda" >
+      <option *ngFor="let region of regiones" [value]="region.id" >
+        {{region.nombreClima}}</option>
+    </select>
   </div>
 
-  <button [disabled]="formularioCrearHacienda.invalid" (click)="crear()">
-    {{nombreBoton}}
-  </button>
-  <button [disabled]="formularioCrearHacienda.invalid" >
-    {{nombreBoton1}}
-  </button>
+  <br>
 
+  <div class="trans text-center">
+    <button class="btn btn-secondary btn-lg active" [disabled]="formularioCrearHacienda.invalid" (click)="crear()">
+      {{nombreBoton}}
+    </button>
+    <button class="btn btn-secondary btn-lg active" [disabled]="formularioCrearHacienda.invalid" >
+      {{nombreBoton1}}
+    </button>
+  </div>
 
+  <br><br><br>
 
 
 </form>
 
-<table *ngIf="haciendas">
+<table *ngIf="haciendas" align="center">
   <table class="table table-hover animated fadeInUp">
     <caption>Lista de Haciendas</caption>
     <!-- tr -> table row -->
@@ -113,3 +122,5 @@
   </table>
 
 </table>
+
+<br><br><br><br>

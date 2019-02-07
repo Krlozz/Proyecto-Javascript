@@ -15,7 +15,8 @@
            for="codigo">Codigo Subparcela</label>
 
     <div class="ulinputgroup">
-      <input id="codigo"
+      <input class="form-control"
+             id="codigo"
              pInputText
              placeholder="Codigo Subarcela"
              required
@@ -25,22 +26,32 @@
              #inputNombre="ngModel"
       >
     </div>
+
+    <br>
+
   </div>
   <div>
     <label for ="medidas">
 
     </label>
-    <input id="medidas"
+    <input class="form-control"
+           id="medidas"
            name="medidas"
            placeholder="Medidas Parcela"
            type="text"
            [(ngModel)]="medidasSubparcela">
   </div>
 
+  <br>
 
+  <div class="trans text-center">
+    <button class="btn btn-secondary btn-lg active" [disabled]="formularioCrearSubparcela.invalid" (click)="crear()">
+      {{nombreBoton}}
+    </button>
+  </div>
 
-  <button [disabled]="formularioCrearSubparcela.invalid" (click)="crear()">
-    {{nombreBoton}}
-  </button>
+  <br><br><br>
 
 </form>
+
+<br><br><br><br>

@@ -15,7 +15,8 @@
            for="codigo">Codigo Subparcela</label>
 
     <div class="ulinputgroup">
-      <input id="codigo"
+      <input class="form-control"
+             id="codigo"
              pInputText
              placeholder="Codigo Sensor"
              required
@@ -25,14 +26,19 @@
              #inputNombre="ngModel"
       >
     </div>
+
+    <br>
+
   </div>
 
 
 
+  <div class="trans text-center">
+    <button class="btn btn-secondary btn-lg active"[disabled]="formularioCrearSensor.invalid" (click)="crear()">
+      {{nombreBoton}}
+    </button>
+  </div>
 
-  <button [disabled]="formularioCrearSensor.invalid" (click)="crear()">
-    {{nombreBoton}}
-  </button>
-
+  <br><br><br>
 
 </form>

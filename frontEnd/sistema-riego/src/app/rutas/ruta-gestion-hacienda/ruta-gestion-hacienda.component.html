@@ -1,9 +1,34 @@
-<h2>Crear Hacienda</h2>
 
-<p>Cree haciendas</p>
-<app-formulario-hacienda
-[nombreBoton]="'Crear'"
-[nombreBoton1]="'Actualizar'"
-(formularioValido)="crearHacienda($event)"
->
-</app-formulario-hacienda>
+<h1 align="center">Gestione Haciendas</h1>
+<br><br>
+
+<div class="container" >
+  <div class="row" >
+    <div class="col-3">
+
+    </div>
+
+    <div class="col-6" style="border-color: black; border: solid;">
+
+      <br>
+      <h2>Cree haciendas</h2>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-12">
+          <app-formulario-hacienda
+            [nombreBoton]="'Crear'"
+            [nombreBoton1]="'Actualizar'"
+            (formularioValido)="crearHacienda($event)"
+          >
+          </app-formulario-hacienda>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+
+    </div>
+
+
+  </div>

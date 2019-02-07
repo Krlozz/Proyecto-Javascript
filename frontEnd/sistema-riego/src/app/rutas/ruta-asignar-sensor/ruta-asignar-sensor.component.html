@@ -1,8 +1,33 @@
-<h2>Crear Sensor</h2>
 
-<p>Cree Sensor</p>
-<app-formulario-gestion-sensor
-  [nombreBoton]="'Crear'"
-  (formularioValido)="crearSensor($event)"
->
-</app-formulario-gestion-sensor>
+<h1 align="center">Gestione Sensores</h1>
+<br><br>
+
+<div class="container" >
+  <div class="row" >
+    <div class="col-3">
+
+    </div>
+
+    <div class="col-6" style="border-color: black; border: solid;">
+
+      <br>
+      <h2>Cree sensor</h2>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-12">
+          <app-formulario-gestion-sensor
+            [nombreBoton]="'Crear'"
+            (formularioValido)="crearSensor($event)"
+          >
+          </app-formulario-gestion-sensor>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+
+    </div>
+
+
+  </div>
