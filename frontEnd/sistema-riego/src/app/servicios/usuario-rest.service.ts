@@ -18,7 +18,7 @@ export class UsuarioRestService {
     // OBSERVABLE
     const usuario$ = this._httpClient
       .get(environment.url + this.nombreModelo)
-      .pipe(map(r => <Usuario[]> r)); // Castear
+      .pipe(map(r => r as Usuario[])); // Castear
 
     return usuario$;
   }
@@ -26,17 +26,15 @@ export class UsuarioRestService {
   delete(id: number): Observable<Usuario> {
     return this._httpClient
       .delete(environment.url + this.nombreModelo + `/${id}`)
-      .pipe(map(r => <Usuario> r)); // Castear
+      .pipe(map((r) => r as Usuario));  // Castear
   }
 
   create(nombre: any,
          cedula: any,
          direccion: any,
          telefono: any,
-         password:any,
-         idHacienda:any
-
-
+         password: any,
+         idHacienda: any
   ) {
 
 
@@ -45,35 +43,33 @@ export class UsuarioRestService {
       cedulaUsuario: cedula,
       direccionUsuario: direccion,
       telefonoUsuario: telefono,
-      password: password,
-      idHacienda:idHacienda
+      password,
+      idHacienda
     };
 
     const url = environment.url + this.nombreModelo;
 
     return this._httpClient
-      .post(url, objetoAGuardar)
-      //.pipe(map(r => <Usuario> r)); // Castear
+      .post(url, objetoAGuardar);
+      // .pipe(map(r => <Usuario> r)); // Castear
   }
-
   findOneById(id: number | string): Observable<Usuario> {
     const url = environment.url + this.nombreModelo
       + '/' + id;
 
     return this._httpClient
       .get(url)
-      .pipe(map(r => <Usuario> r)); // Castear
+      .pipe(map((r) => r as Usuario));  // Castear
   }
 
-  updateOneById(usuario: Usuario) {
+  updateOneById(usuario: Usuario, idUsuario: number) {
 
+    console.log(usuario, 'alooooo', idUsuario);
     const url = environment.url + this.nombreModelo
-      + '/' + usuario.id;
-
+      + '/' + idUsuario;
     return this._httpClient
       .put(url, usuario)
-      .pipe(map(r => <Usuario> r)); // Castear
-
+      .pipe(map((r) => r as Usuario));  // Castear
   }
 
 

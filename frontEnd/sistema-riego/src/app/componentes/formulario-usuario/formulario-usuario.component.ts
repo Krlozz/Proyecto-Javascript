@@ -4,6 +4,7 @@ import {HaciendaRestService} from '../../servicios/hacienda-rest.service';
 import {RegionRestService} from '../../servicios/region-rest.service';
 import {AuthService} from '../../servicios/rest/auth.service';
 import {RolRestService} from '../../servicios/rol-rest.service';
+import {Usuario} from '../../interfaces/usuario';
 
 
 @Component({
@@ -71,11 +72,6 @@ export class FormularioUsuarioComponent implements OnInit {
   }
 
 
-
-  rolesXUser() {
-
-  }
-
   emitirFormularioValido() {
 
     const objetoUsuario = {
@@ -88,19 +84,19 @@ export class FormularioUsuarioComponent implements OnInit {
     };
     this.formularioValido.emit((objetoUsuario));
   }
-  // crear() {
-  //   console.log(this.rol, 'dasdsdasd', this.nombreUsuario);
-  //   this.usuarioRestService.create(this.nombreUsuario, this.cedulaUsuario,
-  //     this.direccionUsuario, this.telefonoUsuario, this.passwordUsuario, this.idHaciendaUsuario).subscribe(
-  //     resp => {
-  //       console.log(resp);
-  //       // const rolPorUsuarioCrear = {
-  //       //   idUsuario: resp.id,
-  //       //   idRol:
-  //       // }
-  //     }
-  //   );
-  // }
+  crear() {
+    console.log(this.rol, 'dasdsdasd', this.nombreUsuario);
+    this.usuarioRestService.create(this.nombreUsuario, this.cedulaUsuario,
+      this.direccionUsuario, this.telefonoUsuario, this.passwordUsuario, this.idHaciendaUsuario).subscribe(
+      resp => {
+        console.log(resp);
+        // const rolPorUsuarioCrear = {
+        //   idUsuario: resp.id,
+        //   idRol:
+        // }
+      }
+    );
+  }
 
 
   findAll() {
@@ -123,7 +119,27 @@ export class FormularioUsuarioComponent implements OnInit {
       }
     );
 
-
-
   }
+
+  eliminar(usuario: Usuario) {
+
+    const usuarioEliminado$ = this.usuarioRestService.delete(usuario.id);
+
+    usuarioEliminado$
+      .subscribe(
+        (usuarioEliminado: Usuario) => {
+          console.log('Se elimino:', usuarioEliminado);
+
+          const indice = this.usuarios
+            .findIndex((u) => u.id === usuario.id);
+
+          this.usuarios.splice(indice, 1);
+
+        },
+        (error) => {
+          console.error('Error', error);
+        }
+      );
+  }
+
 }
