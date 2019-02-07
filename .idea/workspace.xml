@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="618a0b94-a331-4186-b8d9-da756ff8d19f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-gestion-usuarios/ruta-gestion-usuarios.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-gestion-usuarios/ruta-gestion-usuarios.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,21 +22,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="159" column="14" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
+            <state relative-caret-position="138">
+              <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="103" selection-end-column="14" />
               <folding>
-                <element signature="n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" />
                 <element signature="n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-gestion-usuarios/ruta-gestion-usuarios.component.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state relative-caret-position="552">
+              <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -41,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="414">
+              <caret line="67" column="38" lean-forward="true" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -111,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-gestion-parcela/ruta-gestion-parcela.component.ts" />
         <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/servicios/parcela-rest.service.ts" />
         <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/interfaces/parcela.ts" />
         <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-gestion-parcela/formulario-gestion-parcela.component.ts" />
@@ -157,11 +158,12 @@
         <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/interfaces/usuario.ts" />
         <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/servicios/usuario-rest.service.ts" />
         <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.ts" />
-        <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component.ts" />
         <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/app-routing.module.ts" />
-        <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.html" />
         <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-gestion-usuarios/ruta-gestion-usuarios.component.html" />
+        <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.html" />
+        <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component.html" />
+        <option value="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component.ts" />
       </list>
     </option>
   </component>
@@ -367,12 +369,12 @@
       <workItem from="1549447334164" duration="695000" />
       <workItem from="1549450445910" duration="21932000" />
       <workItem from="1549545566627" duration="18049000" />
-      <workItem from="1549563843676" duration="14887000" />
+      <workItem from="1549563843676" duration="16933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110605000" />
+    <option name="totallyTimeSpent" value="112651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -779,16 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-usuario-administrador/ruta-usuario-administrador.component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -802,24 +794,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-gestion-usuarios/ruta-gestion-usuarios.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="159" column="14" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
+        <state relative-caret-position="138">
+          <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="103" selection-end-column="14" />
           <folding>
-            <element signature="n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" />
             <element signature="n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-gestion-usuarios/ruta-gestion-usuarios.component.html">
+    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state relative-caret-position="552">
+          <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="67" column="38" lean-forward="true" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
         </state>
       </provider>
     </entry>

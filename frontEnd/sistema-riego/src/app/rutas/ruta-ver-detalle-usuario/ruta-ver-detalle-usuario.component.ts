@@ -60,7 +60,7 @@ export class RutaVerDetalleUsuarioComponent implements OnInit {
             'gestion-usuarios'
           ];
 
-          alert('Usuario Actualizado' + usuarioActualizado.nombreUsuario);
+          alert('Usuario:' + usuarioActualizado.nombreUsuario + 'Actualizado .......!!!!');
 
           this._router.navigate(url);
         },
