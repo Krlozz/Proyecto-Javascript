@@ -86,10 +86,13 @@
   <br>
 
   <div *ngIf="todosRoles">
-    <select class="form-control-sm fadeIn fourth" name="rol" [(ngModel)]="rol">
+    sdfsdfsd
+    <select class="custom-select" name="rol" [(ngModel)]="rol">
       <option *ngFor="let rol of todosRoles" value="{{rol.id}}"> {{ rol.nombreRol }}</option>
     </select>
   </div>
+
+  <br><br>
 
 
   <div class="trans text-center">
@@ -137,9 +140,10 @@
                   (click)="eliminar(usuario)">Eliminar
           </button>
         </form>
-        <a class="quitar-decoracion" href="/Hacienda/actualizar-hacienda/<%= hacienda.id %>">
-          <button class="btn btn-outline-info btn-block btn-espaciado"
-                  type="button">
+        <a [routerLink]="['/login','usuario-administrador','ver-usuario', usuario.id]">
+          <button type="submit"
+                  class="btn btn-outline-info btn-block btn-espaciado"
+                  >
             Actualizar
           </button>
         </a>

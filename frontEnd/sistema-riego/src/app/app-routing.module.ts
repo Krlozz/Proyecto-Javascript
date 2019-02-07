@@ -18,6 +18,7 @@ import {RutaParcelasComponent} from './rutas/ruta-parcelas/ruta-parcelas.compone
 import {RutaGestionParcelaComponent} from './rutas/ruta-gestion-parcela/ruta-gestion-parcela.component';
 import {RutaGestionSubparcelaComponent} from './rutas/ruta-gestion-subparcela/ruta-gestion-subparcela.component';
 import {Ruta404Component} from './rutas/ruta404/ruta404.component';
+import {RutaVerDetalleUsuarioComponent} from "./rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component";
 
 const routes: Routes = [
 
@@ -106,6 +107,10 @@ const routes: Routes = [
           {
             path: 'gestion-hacienda',
             component: RutaGestionHaciendaComponent
+          },
+          {
+            path: 'ver-usuario/:idUsuario',  //  /login/usuario-administrador/ver-usuario
+            component: RutaVerDetalleUsuarioComponent
           },
           {
             path: 'parcelas',

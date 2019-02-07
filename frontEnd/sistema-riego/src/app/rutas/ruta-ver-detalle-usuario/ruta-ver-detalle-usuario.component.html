@@ -1,0 +1,151 @@
+<h1>Actualizar Usuario</h1>
+
+<div *ngIf="usuarioAActualizar">
+
+  <form #formularioActualizarUsuario="ngForm"
+        novalidate
+        (submit)="actualizarUsuario(formularioActualizarUsuario)"
+  >
+    <div>
+      <p *ngIf="inputNombre.errors">
+        Error:
+        <span *ngIf="inputNombre.errors.required">
+          El nombre es requerido
+        </span>
+      </p>
+      <label for="nombre">Nombre</label>
+      <input id="nombre"
+             required
+             type="text"
+             name="nombreUsuario"
+             [(ngModel)]="usuarioAActualizar.nombreUsuario"
+             #inputNombre="ngModel"
+      >
+      <p *ngIf="inputCedula.errors">
+        Error:
+        <span *ngIf="inputCedula.errors.required">
+          La cedula es requerida
+        </span>
+      </p>
+      <label for="cedula">Cedula</label>
+
+      <input id="cedula"
+             required
+             type="number"
+             name="cedulaUsuario"
+             [(ngModel)]="usuarioAActualizar.cedulaUsuario"
+             #inputCedula="ngModel"
+      >
+      <label for="direccion">Direccion</label>
+
+      <input id="direccion"
+             type="string"
+             name="direccionUsuario"
+             [(ngModel)]="usuarioAActualizar.direccionUsuario"
+             #inputDireccion="ngModel"
+      >
+      <label for="telefono">Telefono</label>
+
+      <input id="telefono"
+             type="string"
+             name="telefonoUsuario"
+             [(ngModel)]="usuarioAActualizar.telefonoUsuario"
+             #inputTelefono="ngModel"
+      >
+    </div>
+    <button [disabled]="formularioActualizarUsuario.invalid">
+      Actualizar
+    </button>
+  </form>
+  
+
+  <!-- <form #formularioActualizarUsuario="ngForm"
+        novalidate
+        (submit)="actualizarUsuario(formularioActualizarUsuario)"
+  >
+    <div>
+      <p *ngIf="inputCedula.errors">
+        Error:
+        <span *ngIf="inputCedula.errors.required">
+          La cedula es requerida
+        </span>
+      </p>
+      <label for="cedula">Cedula</label>
+
+      <input id="cedula"
+             required
+             type="number"
+             name="cedula"
+             [(ngModel)]="usuarioAActualizar.cedula"
+             #inputCedula="ngModel"
+      >
+      <label for="direccion">Direccion</label>
+
+      <input id="direccion"
+             type="string"
+             name="direccion"
+             [(ngModel)]="usuarioAActualizar.direccion"
+             #inputDireccion="ngModel"
+      >
+      <label for="telefono">Telefono</label>
+
+      <input id="telefono"
+             type="string"
+             name="telefono"
+             [(ngModel)]="usuarioAActualizar.telefono"
+             #inputTelefono="ngModel"
+      >
+
+    </div>
+    </div>
+  </form> -->
+
+  <!-- <form #formularioActualizarUsuario="ngForm"
+        novalidate
+        (submit)="actualizarUsuario(formularioActualizarUsuario)"
+  >
+    <div>
+
+      <label for="direccion">Direccion</label>
+
+      <input id="direccion"
+             type="string"
+             name="direccion"
+             [(ngModel)]="usuarioAActualizar.direccion"
+             #inputDireccion="ngModel"
+      >
+
+    </div>
+  </form>
+
+  <form #formularioActualizarUsuario="ngForm"
+        novalidate
+        (submit)="actualizarUsuario(formularioActualizarUsuario)"
+  >
+    <div>
+
+      <label for="telefono">Telefono</label>
+
+      <input id="telefono"
+             type="string"
+             name="telefono"
+             [(ngModel)]="usuarioAActualizar.telefono"
+             #inputTelefono="ngModel"
+      >
+
+    </div>
+  </form>
+
+  <button [disabled]="formularioActualizarUsuario.invalid">
+    Actualizar
+  </button> -->
+
+
+</div>
+
+
+
+
+
+
+

@@ -48,8 +48,10 @@ import {SensorRestService} from './servicios/sensor-rest.service';
 import {RegionRestService} from './servicios/region-rest.service';
 import {FormularioLecturaComponent} from './componentes/formulario-lectura/formulario-lectura.component';
 import {LecturaRestService} from './servicios/rest/historial-rest.service';
-import {RolRestService} from "./servicios/rol-rest.service";
-import {CrearRolXUserRestService} from "./servicios/crear-rolXUser-rest.service";
+import {RolRestService} from './servicios/rol-rest.service';
+import {CrearRolXUserRestService} from './servicios/crear-rolXUser-rest.service';
+import { RutaVerDetalleUsuarioComponent } from './rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component';
+
 
 
 @NgModule({
@@ -85,7 +87,8 @@ import {CrearRolXUserRestService} from "./servicios/crear-rolXUser-rest.service"
 
     FormularioGestionSensorComponent,
     FormularioActualizarSensorComponent,
-    FormularioLecturaComponent
+    FormularioLecturaComponent,
+    RutaVerDetalleUsuarioComponent
 
   ],  // Components
   imports: [
