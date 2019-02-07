@@ -58,8 +58,9 @@
 <div class="wrapper fadeInDown">
   <div id="formContent">
     <!-- Tabs Titles -->
-
+    <br>
     <h1 class="fadeIn first">Iniciar Sesión</h1>
+    <br><br>
 
 
     <!-- Login Form -->
@@ -78,9 +79,9 @@
              placeholder="Contraseña"
              [(ngModel)]="usuario.password">
 
-      <br>
+      <br><br><br>
       <div *ngIf="todosRoles">
-        <select class="form-control-sm fadeIn fourth">
+        <select class="custom-select" style="width: max-content">
           <option *ngFor="let rol of todosRoles" > {{ rol.nombreRol }}</option>
         </select>
       </div>
@@ -91,7 +92,7 @@
       <button class="btn btn-outline-info btn-espaciado fadeIn fourth">
               <!--onclick="validarNombre(event)"-->Ingresa
       </button>
-      <br><br>
+      <br><br><br>
 
     </form>
 

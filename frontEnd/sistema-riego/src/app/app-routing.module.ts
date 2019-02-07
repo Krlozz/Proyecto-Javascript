@@ -30,7 +30,8 @@ const routes: Routes = [
 
   {
     path: 'inicio',
-    component: RutaInicioComponent
+    component: RutaInicioComponent,
+
   },
 
   {
@@ -83,7 +84,7 @@ const routes: Routes = [
             path: 'reestablecer-contrasenia',
             component: RutaReestablecerContraseniaComponent
           },
-        ]
+        ],
       },
       {
         path: 'usuario-administrador',
@@ -120,7 +121,7 @@ const routes: Routes = [
               },
             ]
           },
-        ]
+        ],
       },
     ]
   },
