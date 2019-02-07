@@ -24,7 +24,8 @@ export class RutaGestionSubparcelaComponent implements OnInit {
     const crearSubparcela = this._subparcelaRestService
       .create(
         subparcelaObjeto.codigoSubparcela,
-        subparcelaObjeto.medidasSubparcela
+        subparcelaObjeto.medidasSubparcela,
+        subparcelaObjeto.idParcelaSubparcela
       );
     crearSubparcela
       .subscribe(

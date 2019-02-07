@@ -9,6 +9,8 @@ import {SubparcelaRestService} from "../../servicios/subparcela-rest.service";
 })
 export class FormularioGestionSubparcelaComponent implements OnInit {
 
+  subparcelas =[]
+  parcelas=[]
   @Input()
   medidas:string;
   codigo:string;
@@ -21,31 +23,65 @@ export class FormularioGestionSubparcelaComponent implements OnInit {
   medidasSubparcela:string;
   codigoSubparcela:string;
 
-  subparcela:any = {
+  parcela:any = {
     id:''
   }
   idParcelaSubparcela:number;
 
   constructor(public readonly subparcelaRestService : SubparcelaRestService,
-  public readonly  parcelaRestServices:ParcelaRestService){ }
+              public readonly  parcelaRestServices:ParcelaRestService
+  ){ }
 
-  ngOnInit() {
+
+  ngOnInit(): void {
     this.medidasSubparcela= this.medidas;
     this.codigoSubparcela= this.codigo;
+    this.idParcelaSubparcela= this.idParcela
+
+    this.findAll()
+    this.findAllParcelas()
   }
+
+
+
+
 
   emitirFormularioValido(){
     const objetoSubparcela = {
       medidas:this.medidasSubparcela,
       codigo:this.codigoSubparcela,
+      idParcela:this.idParcelaSubparcela
     };
     this.formularioValido.emit((objetoSubparcela))
   }
   crear () {
-    this.subparcelaRestService.create(this.codigoSubparcela , this.medidasSubparcela).subscribe(
+    this.subparcelaRestService.create(this.codigoSubparcela , this.medidasSubparcela, this.idParcelaSubparcela).subscribe(
       resp=> {
         console.log(resp)
       }
     )
+  }
+
+  findAll(){
+    this.subparcelaRestService.findAll().subscribe(
+      resp =>{
+        console.log(resp)
+        this.subparcelas=resp
+
+      }
+    )
+
+
+  }
+  findAllParcelas(){
+    this.parcelaRestServices.findAll().subscribe(
+      resp =>{
+        console.log(resp)
+        this.parcelas=resp
+
+      }
+    )
+
+
   }
 }

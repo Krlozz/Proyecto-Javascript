@@ -46,6 +46,8 @@ import {ParcelaRestService} from './servicios/parcela-rest.service';
 import {SubparcelaRestService} from './servicios/subparcela-rest.service';
 import {SensorRestService} from './servicios/sensor-rest.service';
 import {RegionRestService} from './servicios/region-rest.service';
+import {FormularioLecturaComponent} from './componentes/formulario-lectura/formulario-lectura.component';
+import {LecturaRestService} from './servicios/rest/historial-rest.service';
 
 
 @NgModule({
@@ -78,9 +80,10 @@ import {RegionRestService} from './servicios/region-rest.service';
     FormularioActualizarUsuarioComponent,
     FormularioGestionParcelaComponent,
     FormularioGestionSubparcelaComponent,
-    FormularioGestionLecturaComponent,
+
     FormularioGestionSensorComponent,
-    FormularioActualizarSensorComponent
+    FormularioActualizarSensorComponent,
+    FormularioLecturaComponent
 
   ],  // Components
   imports: [
@@ -104,7 +107,8 @@ import {RegionRestService} from './servicios/region-rest.service';
     ParcelaRestService,
     SubparcelaRestService,
     SensorRestService,
-    RegionRestService
+    RegionRestService,
+    LecturaRestService
   ],
   bootstrap: [AppComponent]
 

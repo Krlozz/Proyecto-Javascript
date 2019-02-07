@@ -1,6 +1,7 @@
-<form #formularioCrearSubparcela="ngForm"
+<form #formularioLectura="ngForm"
       novalidate
-      (submit)="emitirFormularioValido(formularioCrearSubparcela)"
+      (submit)="emitirFormularioValido(formularioLectura)"
+
 >
   <div>
     <p *ngIf="inputNombre.errors">
@@ -12,67 +13,43 @@
 
     </p>
     <label [hidden]="true"
-           for="codigo">Codigo Subparcela</label>
+           for="nombreHacienda">Nombre Hacienda</label>
 
     <div class="ulinputgroup">
-      <input class="form-control"
-             id="codigo"
+      <input id="nombreHacienda"
              pInputText
-             placeholder="Codigo Subarcela"
+             placeholder="Nombre Hacienda"
              required
              type="text"
-             name="codigo"
-             [(ngModel)]="codigoSubparcela"
+             name="nombreHacienda"
+             [(ngModel)]="nombreHacienda"
              #inputNombre="ngModel"
       >
     </div>
-
-    <br>
-
-  </div>
-  <div>
-    <label for ="medidas">
-
-    </label>
-    <input class="form-control"
-           id="medidas"
-           name="medidas"
-           placeholder="Medidas Parcela"
-           type="text"
-           [(ngModel)]="medidasSubparcela">
   </div>
 
-  <br>
-
-  <div class="trans text-center">
-    <button class="btn btn-secondary btn-lg active" [disabled]="formularioCrearSubparcela.invalid" (click)="crear()">
-      {{nombreBoton}}
-    </button>
-  </div>
-
-  <br><br><br>
 
 </form>
 
-<table *ngIf="subparcelas" align="center">
+<table *ngIf="lecturas">
   <table class="table table-hover animated fadeInUp">
-    <caption>Lista de Haciendas</caption>
+    <caption>Lista de Lecturas</caption>
     <!-- tr -> table row -->
     <thead>
     <tr>
       <!-- th -> table header -->
-      <th width="30%">Código</th>
-      <th width="50%">Medidas</th>
+      <th width="30%">Fecha</th>
+      <th width="50%">Descripción</th>
 
     </tr>
     </thead>
     <!-- tr -> table row -->
-    <tbody *ngFor="let subparcela of subparcelas">
+    <tbody *ngFor="let lectura of lecturas">
 
     <tr>
 
-      <td>{{subparcela.codigoSubparcela}} </td>
-      <td>{{subparcela.medidasSubparcela}}</td>
+      <td>{{lectura.fechaLectura}} </td>
+      <td>{{lectura.descripcionLectura}}</td>
 
       <td>
         <form action="/Hacienda/borrar/<%= hacienda.id %>"
@@ -98,7 +75,3 @@
   </table>
 
 </table>
-
-
-
-<br><br><br><br>
