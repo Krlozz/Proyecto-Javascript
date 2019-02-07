@@ -15,14 +15,15 @@ export class RutaGestionUsuariosComponent implements OnInit {
   }
 
   crearUsuario(usuarioObjeto){
+    console.log(usuarioObjeto,'sssss');
     const crearUsuario$ = this._usuarioRestService
       .create(
         usuarioObjeto.nombreUsuario,
         usuarioObjeto.cedulaUsuario,
-        usuarioObjeto.passwordUsuario,
+        usuarioObjeto.password,
         usuarioObjeto.direccionUsuario,
         usuarioObjeto.telefonoUsuario,
-        usuarioObjeto.idHaciendaUsuario
+        usuarioObjeto.idHacienda
 
       );
     crearUsuario$

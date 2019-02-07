@@ -1,30 +1,25 @@
-import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
-import {environment} from "../../environments/environment";
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {environment} from '../../environments/environment';
 
 @Injectable()
 export class CrearRolXUserRestService {
 
+  nombreModelo = '/RolXUsuario';
+
   constructor(private readonly _httpClient: HttpClient) {   }
 
-  create(idUsuario: any,
-         idRol: any,
+  create(rolxUsuario:any) {
 
-  ) {
-
-    const objetoAGuardar = {
-      codigoParcela: codigo,
-      medidasParcela: medidas,
-      idHaciendaParcela:idHacienda,
-      idUsuarioParcela:idUsuario
-
-    };
+    // const objetoAGuardar = {
+    //   idUsuario,
+    //   idRol,
+    // };
 
     const url = environment.url + this.nombreModelo;
 
     return this._httpClient
-      .post(url, objetoAGuardar)
-    // .pipe(map(r => <Parcela> r)); // Castear
+      .post(url, rolxUsuario);
   }
 
 

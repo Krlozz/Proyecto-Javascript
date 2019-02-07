@@ -33,7 +33,7 @@ export class UsuarioRestService {
          cedula: any,
          direccion: any,
          telefono: any,
-          password:any,
+         password:any,
          idHacienda:any
 
 
@@ -45,8 +45,8 @@ export class UsuarioRestService {
       cedulaUsuario: cedula,
       direccionUsuario: direccion,
       telefonoUsuario: telefono,
-      passwordUsuario: password,
-      idHaciendaUsuario:idHacienda
+      password: password,
+      idHacienda:idHacienda
     };
 
     const url = environment.url + this.nombreModelo;

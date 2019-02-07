@@ -2,8 +2,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {UsuarioRestService} from '../../servicios/usuario-rest.service';
 import {HaciendaRestService} from '../../servicios/hacienda-rest.service';
 import {RegionRestService} from '../../servicios/region-rest.service';
-import {AuthService} from "../../servicios/rest/auth.service";
-import {RolRestService} from "../../servicios/rol-rest.service";
+import {AuthService} from '../../servicios/rest/auth.service';
+import {RolRestService} from '../../servicios/rol-rest.service';
 
 
 @Component({
@@ -35,8 +35,9 @@ export class FormularioUsuarioComponent implements OnInit {
   passwordUsuario: string;
   Hacienda: any = {
     id: ''
-  }
-  idHaciendaUsuario: number
+  };
+  rol: any;
+  idHaciendaUsuario: number;
 
   todosRoles: any;
 
@@ -52,6 +53,7 @@ export class FormularioUsuarioComponent implements OnInit {
     this.telefonoUsuario = this.telefono;
     this.passwordUsuario = this.password;
     this.idHaciendaUsuario = this.idHacienda;
+
     this.findAll();
     this.findAllHaciendas();
     this.obtenerRoles();
@@ -77,23 +79,28 @@ export class FormularioUsuarioComponent implements OnInit {
   emitirFormularioValido() {
 
     const objetoUsuario = {
-      nombre:this.nombreUsuario,
-      cedula:this.cedulaUsuario,
-      direccion:this.direccionUsuario,
-      telefono:this.telefonoUsuario,
-      password:this.passwordUsuario,
-      idHacienda:this.idHaciendaUsuario
+      nombreUsuario: this.nombreUsuario,
+      cedulaUsuario: this.cedulaUsuario,
+      direccionUsuario: this.direccionUsuario,
+      telefonoUsuario: this.telefonoUsuario,
+      password: this.passwordUsuario,
+      idHacienda: this.idHaciendaUsuario
     };
     this.formularioValido.emit((objetoUsuario));
   }
-  crear() {
-    this.usuarioRestService.create(this.nombreUsuario, this.cedulaUsuario,
-      this.direccionUsuario, this.telefonoUsuario, this.passwordUsuario, this.idHaciendaUsuario).subscribe(
-      resp => {
-        console.log(resp);
-      }
-    );
-  }
+  // crear() {
+  //   console.log(this.rol, 'dasdsdasd', this.nombreUsuario);
+  //   this.usuarioRestService.create(this.nombreUsuario, this.cedulaUsuario,
+  //     this.direccionUsuario, this.telefonoUsuario, this.passwordUsuario, this.idHaciendaUsuario).subscribe(
+  //     resp => {
+  //       console.log(resp);
+  //       // const rolPorUsuarioCrear = {
+  //       //   idUsuario: resp.id,
+  //       //   idRol:
+  //       // }
+  //     }
+  //   );
+  // }
 
 
   findAll() {

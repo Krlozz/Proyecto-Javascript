@@ -49,6 +49,7 @@ import {RegionRestService} from './servicios/region-rest.service';
 import {FormularioLecturaComponent} from './componentes/formulario-lectura/formulario-lectura.component';
 import {LecturaRestService} from './servicios/rest/historial-rest.service';
 import {RolRestService} from "./servicios/rol-rest.service";
+import {CrearRolXUserRestService} from "./servicios/crear-rolXUser-rest.service";
 
 
 @NgModule({
@@ -110,7 +111,8 @@ import {RolRestService} from "./servicios/rol-rest.service";
     SensorRestService,
     RegionRestService,
     LecturaRestService,
-    RolRestService
+    RolRestService,
+    CrearRolXUserRestService
   ],
   bootstrap: [AppComponent]
 

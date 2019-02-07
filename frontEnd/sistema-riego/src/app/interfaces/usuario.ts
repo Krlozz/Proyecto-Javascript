@@ -4,7 +4,7 @@ export interface Usuario {
   cedulaUsuario:string
   telefonoUsuario:string
   direccionUsuario:string
-  passwordUsuario:string
+  password:string
   idHacienda:string
 
 }
