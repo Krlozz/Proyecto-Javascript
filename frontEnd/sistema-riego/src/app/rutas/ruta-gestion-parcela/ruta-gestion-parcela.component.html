@@ -1,8 +1,32 @@
-<h2>Gestione Parcela</h2>
+<h1 align="center">Gestione Parcela</h1>
+<br><br>
 
-<p>Cree haciendas</p>
-<app-formulario-gestion-parcela
-  [nombreBoton]="'Crear'"
-  (formularioValido)="crearParcela($event)"
->
-</app-formulario-gestion-parcela>
+<div class="container" >
+  <div class="row" >
+    <div class="col-3">
+
+    </div>
+
+    <div class="col-6" style="border-color: black; border: solid;">
+
+      <br>
+      <h2>Cree haciendas</h2>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-12">
+          <app-formulario-gestion-parcela
+            [nombreBoton]="'Crear'"
+            (formularioValido)="crearParcela($event)"
+          >
+          </app-formulario-gestion-parcela>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+
+    </div>
+
+
+</div>
