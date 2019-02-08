@@ -21,7 +21,7 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
 
-  'POST /Usuario/login': 'UsuarioController.login',
+  'GET /Usuario/login': 'UsuarioController.login',
   'POST /Lectura/controlLed': 'LecturaController.controlLed',
 
 

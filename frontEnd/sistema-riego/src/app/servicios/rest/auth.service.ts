@@ -32,10 +32,12 @@ export class AuthService {
         
         ): Observable<Usuario> {
 
-    const url = environment.url + '/usuario/login';
+    const url = environment.url + '/usuario/Login';
+    const  urlMaster = url+'?cedulaUsuario='+cedulaUsuario+'&password='+password;
+    console.log(urlMaster)
 
     return this._httpClient
-      .get(url+'Usuario?cedulaUsuario=22222&password=lkj')
+      .get(url+'?cedulaUsuario='+cedulaUsuario+'&password='+password)
       .pipe(map(r => r as Usuario)); // Casteo
 
   }

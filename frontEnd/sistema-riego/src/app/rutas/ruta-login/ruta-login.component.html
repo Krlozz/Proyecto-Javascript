@@ -77,8 +77,9 @@
 
       <br><br><br>
       <div *ngIf="todosRoles">
-        <select class="custom-select" style="width: max-content">
-          <option *ngFor="let rol of todosRoles" > {{ rol.nombreRol }}</option>
+        Selecione el rol
+        <select class="custom-select" style="width: max-content" name="rol" [(ngModel)]="usuario.rol">
+          <option *ngFor="let rol of todosRoles"  value="{{rol.id}}"> {{ rol.nombreRol }}</option>
         </select>
       </div>
 
@@ -91,7 +92,7 @@
 
       <!--</div>-->
 
-      <button class="btn btn-outline-info btn-espaciado fadeIn fourth" routerLink="/usuario-administrador">
+      <button class="btn btn-outline-info btn-espaciado fadeIn fourth" (click)="login()">
         <!--onclick="validarNombre(event)"-->Ingresa
       </button>
 

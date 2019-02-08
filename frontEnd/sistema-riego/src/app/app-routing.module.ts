@@ -19,6 +19,8 @@ import {RutaGestionParcelaComponent} from './rutas/ruta-gestion-parcela/ruta-ges
 import {RutaGestionSubparcelaComponent} from './rutas/ruta-gestion-subparcela/ruta-gestion-subparcela.component';
 import {Ruta404Component} from './rutas/ruta404/ruta404.component';
 import {RutaVerDetalleUsuarioComponent} from "./rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component";
+import {EstaLogeadoAdminGuards} from "./autentificacion/esta-logeado-admin.guards";
+import {EstaLogeadoUsuarioGuard} from "./autentificacion/esta-logeado-usuario.guard";
 
 const routes: Routes = [
 
@@ -133,7 +135,8 @@ const routes: Routes = [
 
   {
     path: 'usuario-encargado/perfil/control',
-    component: RutaHistorialComponent
+    component: RutaHistorialComponent,
+    //canActivate: [EstaLogeadoUsuarioGuard]
   },
   {
     path: 'usuario-administrador',
@@ -175,7 +178,8 @@ const routes: Routes = [
         component: RutaGestionSubparcelaComponent
       },
 
-    ]
+    ],
+    // canActivate:[EstaLogeadoAdminGuards]
   },
 
 

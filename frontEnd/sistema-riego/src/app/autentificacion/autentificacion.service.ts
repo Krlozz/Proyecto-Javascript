@@ -5,7 +5,7 @@ import {HttpClient} from "@angular/common/http";
 @Injectable()
 export class AutentificacionService {
 
-  estaLogeadoUser: boolean = true
+  estaLogeadoUser: boolean = false
   estaLogeadoAdmin: boolean = true
 
   constructor(
