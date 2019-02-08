@@ -55,12 +55,10 @@ export class RutaVerDetalleUsuarioComponent implements OnInit {
         (usuarioActualizado: Usuario) => {
 
           const url = [
-            '/login',
-            'usuario-administrador',
-            'gestion-usuarios'
+            '/gestion-usuarios'
           ];
 
-          alert('Usuario:' + usuarioActualizado.nombreUsuario + 'Actualizado .......!!!!');
+          alert('Usuario:   ' + usuarioActualizado.nombreUsuario + 'Actualizado .......!!!!');
 
           this._router.navigate(url);
         },

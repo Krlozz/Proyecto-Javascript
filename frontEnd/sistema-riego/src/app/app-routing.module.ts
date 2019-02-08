@@ -71,10 +71,10 @@ const routes: Routes = [
                 path: 'notificaciones',
                 component: RutaNotificacionesComponent
               },
-              {
-                path: 'historial',
-                component: RutaHistorialComponent
-              },
+              // {
+              //   path: 'historial',
+              //   component: RutaHistorialComponent
+              // },
               {
                 path: 'ajustes',
                 component: RutaAjustesComponent
@@ -96,40 +96,76 @@ const routes: Routes = [
             pathMatch: 'full',
             redirectTo: 'gestion-usuarios'
           },
-          {
-            path: 'gestion-usuarios',
-            component: RutaGestionUsuariosComponent
-          },
-          {
-            path: 'asignar-sensor',
-            component: RutaAsignarSensorComponent
-          },
-          {
-            path: 'gestion-hacienda',
-            component: RutaGestionHaciendaComponent
-          },
-          {
-            path: 'ver-usuario/:idUsuario',  //  /login/usuario-administrador/ver-usuario
-            component: RutaVerDetalleUsuarioComponent
-          },
+          // {
+          //   path: 'gestion-usuarios',
+          //   component: RutaGestionUsuariosComponent
+          // },
+          // {
+          //   path: 'asignar-sensor',
+          //   component: RutaAsignarSensorComponent
+          // },
+          // {
+          //   path: 'gestion-hacienda',
+          //   component: RutaGestionHaciendaComponent
+          // },
+          // {
+          //   path: 'ver-usuario/:idUsuario',  //  /login/usuario-administrador/ver-usuario
+          //   component: RutaVerDetalleUsuarioComponent
+          // },
           {
             path: 'parcelas',
             component: RutaParcelasComponent,
             children: [
-              {
-                path: 'gestion-parcela',
-                component: RutaGestionParcelaComponent
-              },
-              {
-                path: 'gestion-subparcela',
-                component: RutaGestionSubparcelaComponent
-              },
+              // {
+              //   path: 'gestion-parcela',
+              //   component: RutaGestionParcelaComponent
+              // },
+              // {
+              //   path: 'gestion-subparcela',
+              //   component: RutaGestionSubparcelaComponent
+              // },
             ]
           },
         ],
       },
     ]
   },
+
+  {
+    path: 'control',
+    component: RutaHistorialComponent
+  },
+
+  {
+    path: 'gestion-usuarios',
+    component: RutaGestionUsuariosComponent
+  },
+
+  {
+    path: 'asignar-sensor',
+    component: RutaAsignarSensorComponent
+  },
+
+  {
+    path: 'gestion-hacienda',
+    component: RutaGestionHaciendaComponent
+  },
+
+  {
+    path: 'ver-usuario/:idUsuario',  //  /login/usuario-administrador/ver-usuario
+    component: RutaVerDetalleUsuarioComponent
+  },
+
+  {
+    path: 'gestion-parcela',
+    component: RutaGestionParcelaComponent
+  },
+  {
+    path: 'gestion-subparcela',
+    component: RutaGestionSubparcelaComponent
+  },
+
+
 
   {
     path: 'no-encontrado',

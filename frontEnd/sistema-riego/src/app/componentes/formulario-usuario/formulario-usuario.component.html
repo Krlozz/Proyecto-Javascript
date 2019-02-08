@@ -150,7 +150,8 @@
                         (click)="eliminar(usuario)">Eliminar
                 </button>
               </form>
-              <a [routerLink]="['/login','usuario-administrador','ver-usuario', usuario.id]">
+              <!--<a [routerLink]="['/login','usuario-administrador','ver-usuario', usuario.id]">-->
+              <a [routerLink]="['/ver-usuario', usuario.id]">
                 <button type="submit"
                         class="btn btn-outline-info btn-block btn-espaciado"
                 >
