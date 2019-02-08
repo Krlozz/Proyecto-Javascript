@@ -16,8 +16,8 @@
     <thead>
     <tr>
       <!-- th -> table header -->
-      <th width="30%">Fecha</th>
-      <th width="50%">Descripción</th>
+      <th width="70%">Fecha</th>
+      <th width="100%">Descripción</th>
 
     </tr>
     </thead>
@@ -27,7 +27,7 @@
     <tr>
 
       <td>{{lectura.fechaLectura}} </td>
-      <td>{{lectura.descripcionLectura}}</td>
+      <td>{{lectura.descripcion}}</td>
 
       <td>
         <form action="/Hacienda/borrar/<%= hacienda.id %>"

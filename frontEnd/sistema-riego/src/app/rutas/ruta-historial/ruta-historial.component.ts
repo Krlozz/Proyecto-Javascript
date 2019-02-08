@@ -19,7 +19,7 @@ export class RutaHistorialComponent implements OnInit {
     const crearLectura$ = this._lecturaRestService
       .create(
         lecturaObjeto.fechaLectura,
-        lecturaObjeto.descripcionLectura,
+        lecturaObjeto.descripcion,
         lecturaObjeto.idRegionHacienda,
 
 
@@ -27,7 +27,7 @@ export class RutaHistorialComponent implements OnInit {
     crearLectura$
       .subscribe(
         (lectura:Lectura) =>{
-          alert(`Lectura creada: ${lectura.descripcionLectura}`)
+          alert(`Lectura creada: ${lectura.descripcion}`)
         },
         (error) =>{
           console.log('Error: ', error)

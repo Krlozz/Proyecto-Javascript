@@ -1,7 +1,7 @@
 export interface Lectura {
   id?: number;
   fechaLectura: string;
-  descripcionLectura: string;
+  descripcion: string;
   telefonoHacienda: string;
   idSensor:any;
   createdAt?: number;
