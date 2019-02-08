@@ -75,7 +75,7 @@
                  id="passwordUsuario"
                  name="passwordUsuario"
                  placeholder="Password Usuario"
-                 type="text"
+                 type="password"
                  [(ngModel)]="passwordUsuario">
         </div>
         <br>
@@ -104,7 +104,7 @@
 
 
         <div class="trans text-center">
-          <button class="btn btn-secondary btn-lg active" [disabled]="formularioCrearUsuario.invalid" (click)="crear()" >
+          <button class="btn btn-secondary btn-lg active" [disabled]="formularioCrearUsuario.invalid" (click)="crear()">
             {{nombreBoton}}
           </button>
         </div>

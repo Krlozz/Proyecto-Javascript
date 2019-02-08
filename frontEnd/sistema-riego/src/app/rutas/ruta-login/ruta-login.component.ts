@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../servicios/rest/auth.service';
 import { RolRestService } from '../../servicios/rol-rest.service';
 import {AutentificacionService} from "../../autentificacion/autentificacion.service";
-import {Route, Router} from "@angular/router";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-ruta-login',

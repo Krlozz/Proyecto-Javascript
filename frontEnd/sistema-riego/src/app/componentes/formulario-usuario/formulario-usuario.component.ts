@@ -6,6 +6,7 @@ import { RegionRestService } from '../../servicios/region-rest.service';
 import { AuthService } from '../../servicios/rest/auth.service';
 import { RolRestService } from '../../servicios/rol-rest.service';
 import { Usuario } from '../../interfaces/usuario';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -43,7 +44,8 @@ export class FormularioUsuarioComponent implements OnInit {
     public readonly usuarioRestService: UsuarioRestService,
     public readonly haciendaRestService: HaciendaRestService,
     private readonly _rolService: RolRestService,
-    private readonly _crearRolXUserRestService: CrearRolXUserRestService
+    private readonly _crearRolXUserRestService: CrearRolXUserRestService,
+    private readonly _route:Router
   ) { }
 
   ngOnInit() {
