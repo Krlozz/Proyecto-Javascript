@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Usuario } from '../../interfaces/usuario';
-import { UsuarioRestService } from '../../servicios/usuario-rest.service';
-import { NgForm } from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Usuario} from '../../interfaces/usuario';
+import {UsuarioRestService} from '../../servicios/usuario-rest.service';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-ruta-ver-detalle-usuario',
@@ -17,7 +17,8 @@ export class RutaVerDetalleUsuarioComponent implements OnInit {
     private readonly _activatedRoute: ActivatedRoute,
     private readonly _usuarioRestService: UsuarioRestService,
     private readonly _router: Router,
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
 
@@ -34,7 +35,7 @@ export class RutaVerDetalleUsuarioComponent implements OnInit {
               (usuarios: Usuario) => {
 
                 this.usuarioAActualizar = usuarios;
-                console.log(this.usuarioAActualizar, 'alllll');
+                console.log(this.usuarioAActualizar);
               },
               (error) => {
                 console.log('Error: ', error);

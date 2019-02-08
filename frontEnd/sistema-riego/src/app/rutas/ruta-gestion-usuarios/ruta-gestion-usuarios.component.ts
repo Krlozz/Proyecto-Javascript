@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {UsuarioRestService} from "../../servicios/usuario-rest.service";
-import {Usuario} from "../../interfaces/usuario";
+import {UsuarioRestService} from '../../servicios/usuario-rest.service';
+import {Usuario} from '../../interfaces/usuario';
 
 @Component({
   selector: 'app-ruta-gestion-usuarios',
@@ -14,8 +14,8 @@ export class RutaGestionUsuariosComponent implements OnInit {
   ngOnInit() {
   }
 
-  crearUsuario(usuarioObjeto){
-    console.log(usuarioObjeto,'sssss');
+  crearUsuario(usuarioObjeto) {
+    console.log(usuarioObjeto);
     const crearUsuario$ = this._usuarioRestService
       .create(
         usuarioObjeto.nombreUsuario,
@@ -28,25 +28,23 @@ export class RutaGestionUsuariosComponent implements OnInit {
       );
     crearUsuario$
       .subscribe(
-        (usuario:Usuario) =>{
-          alert(`Usuario creado: ${usuario.nombreUsuario}`)
+        (usuario: Usuario) => {
+          alert(`Usuario creado: ${usuario.nombreUsuario}`);
         },
-        (error) =>{
-          console.log('Error: ', error)
+        (error) => {
+          console.log('Error: ', error);
         }
       );
 
   }
 
-  nombreContieneA(nombre:String):boolean{
-    return nombre.toLowerCase().includes('a')
+  nombreContieneA(nombre: String): boolean {
+    return nombre.toLowerCase().includes('a');
   }
-  mostrarEnConsola(objeto){
-    console.log(objeto)
-    console.log(objeto)
+  mostrarEnConsola(objeto) {
+    console.log(objeto);
+    console.log(objeto);
   }
-
-
 
 }
 interface UsuarioEjemplo {
