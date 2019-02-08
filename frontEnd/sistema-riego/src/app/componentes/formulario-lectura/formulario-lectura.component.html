@@ -3,21 +3,22 @@
       (submit)="emitirFormularioValido(formularioLectura)"
 
 >
-
-  <br>
-
-
 </form>
+
+<div style="background-color: #92badd; height: 35px" >
+  <h4 align="center">Lista de Focos</h4>
+</div>
+
+<br><br>
 
 <table *ngIf="lecturas" align="center">
   <table class="table table-hover animated fadeInUp">
-    <caption>Lista de Lecturas</caption>
     <!-- tr -> table row -->
     <thead>
     <tr>
       <!-- th -> table header -->
       <th width="70%">Fecha</th>
-      <th width="100%">Descripción</th>
+      <th width="70%">Descripción</th>
 
     </tr>
     </thead>
@@ -36,14 +37,14 @@
           <!--<button type="button">Yo no</button>-->
           <!--<button>Yo si</button>-->
           <button type="submit"
-                  class="btn btn-outline-danger btn-block btn-espaciado"
-                  onclick="borrar(event)">Eliminar
+                  class="btn btn-secondary btn-block btn-espaciado"
+                  onclick="borrar(event)">Foco-1
           </button>
         </form>
         <a class="quitar-decoracion" href="/Hacienda/actualizar-hacienda/<%= hacienda.id %>">
-          <button class="btn btn-outline-info btn-block btn-espaciado"
+          <button class="btn btn-light btn-block btn-espaciado"
                   type="button">
-            Actualizar
+            Foco-2
           </button>
         </a>
       </td>

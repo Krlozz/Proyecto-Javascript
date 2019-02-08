@@ -51,6 +51,7 @@ import {LecturaRestService} from './servicios/rest/historial-rest.service';
 import {RolRestService} from './servicios/rol-rest.service';
 import {CrearRolXUserRestService} from './servicios/crear-rolXUser-rest.service';
 import { RutaVerDetalleUsuarioComponent } from './rutas/ruta-ver-detalle-usuario/ruta-ver-detalle-usuario.component';
+import {AutentificacionService} from "./autentificacion/autentificacion.service";
 
 
 
@@ -115,7 +116,8 @@ import { RutaVerDetalleUsuarioComponent } from './rutas/ruta-ver-detalle-usuario
     RegionRestService,
     LecturaRestService,
     RolRestService,
-    CrearRolXUserRestService
+    CrearRolXUserRestService,
+    AutentificacionService
   ],
   bootstrap: [AppComponent]
 
