@@ -1,0 +1,33 @@
+<h1 align="center">Gestione Usuarios</h1>
+<br><br>
+
+<div class="container" >
+  <div class="row" >
+    <div class="col-1">
+
+    </div>
+
+    <div class="col-10" style="border-color: black; border: solid;">
+
+      <br>
+      <h2>Cree usuarios</h2>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-12">
+          <app-formulario-usuario
+            [nombreBoton]="'Crear'"
+            (formularioValido)="crearUsuario($event)"
+          >
+          </app-formulario-usuario>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-1">
+
+    </div>
+
+
+  </div>
+  <br><br><br><br>

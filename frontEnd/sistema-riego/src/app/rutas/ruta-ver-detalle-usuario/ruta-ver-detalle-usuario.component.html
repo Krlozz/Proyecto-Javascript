@@ -1,0 +1,101 @@
+
+
+<br><br>
+
+<div class="container" >
+  <h2 align="center">Actualizar Usuario</h2>
+  <br><br>
+
+  <div class="row" >
+    <div class="col-3">
+
+    </div>
+
+    <div class="col-6" style="border-color: black; border: solid;">
+      <div *ngIf="usuarioAActualizar">
+
+        <form #formularioActualizarUsuario="ngForm"
+              novalidate
+              (submit)="actualizarUsuario(formularioActualizarUsuario)"
+        >
+          <div>
+            <p *ngIf="inputNombre.errors">
+              Error:
+              <span *ngIf="inputNombre.errors.required">
+          El nombre es requerido
+        </span>
+            </p>
+            <br><br>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default1">Nombre</span>
+              </div>
+              <input id="nombre" required type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="nombreUsuario"
+                     [(ngModel)]="usuarioAActualizar.nombreUsuario"
+                     #inputNombre="ngModel">
+            </div>
+
+            <p *ngIf="inputCedula.errors">
+              Error:
+              <span *ngIf="inputCedula.errors.required">
+          La cedula es requerida
+        </span>
+            </p>
+            <br>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default2">Cédula</span>
+              </div>
+              <input id="cedula"
+                     required
+                     type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="cedulaUsuario"
+                     [(ngModel)]="usuarioAActualizar.cedulaUsuario"
+                     #inputCedula="ngModel">
+            </div>
+            <br>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default3">Dirección</span>
+              </div>
+              <input id="direccion"
+                     type="string" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="direccionUsuario"
+                     [(ngModel)]="usuarioAActualizar.direccionUsuario"
+                     #inputDireccion="ngModel">
+            </div>
+            <br>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default4">Teléfono</span>
+              </div>
+              <input id="telefono"
+                     type="string" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="telefonoUsuario"
+                     [(ngModel)]="usuarioAActualizar.telefonoUsuario"
+                     #inputTelefono="ngModel">
+            </div>
+
+          </div>
+
+          <br><br>
+
+          <div class="trans text-center">
+            <button class="btn btn-primary btn-lg active" [disabled]="formularioActualizarUsuario.invalid">
+              Actualizar
+            </button>
+          </div>
+
+          <br><br><br>
+        </form>
+
+      </div>
+    </div>
+
+    <div class="col-3">
+
+    </div>
+  </div>
+  <br><br><br><br>
+</div>

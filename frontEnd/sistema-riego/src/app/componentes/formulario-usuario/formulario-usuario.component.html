@@ -1,0 +1,173 @@
+<div class="container" >
+  <div class="row" >
+    <div class="col-4">
+      <form #formularioCrearUsuario="ngForm"
+            novalidate
+            (submit)="emitirFormularioValido(formularioCrearUsuario)"
+      >
+        <div>
+          <p *ngIf="inputNombre.errors">
+
+            <p-message
+              *ngIf="inputNombre.errors.required"
+              severity="warn"
+              text="Error: El nombre es requerido"></p-message>
+
+          </p>
+          <label [hidden]="true"
+                 for="nombreUsuario">Nombre Usuario</label>
+
+          <div class="ulinputgroup">
+            <input class="form-control"
+                   id="nombreUsuario"
+                   pInputText
+                   placeholder="Nombre Usuario"
+                   required
+                   type="text"
+                   name="nombreUsuario"
+                   [(ngModel)]="nombreUsuario"
+                   #inputNombre="ngModel"
+            >
+          </div>
+
+        </div>
+        <div>
+          <label for ="cedulaUsuario">
+
+          </label>
+          <input class="form-control"
+                 id="cedulaUsuario"
+                 name="cedulaUsuario"
+                 placeholder="Cedula Usuario"
+                 type="text"
+                 [(ngModel)]="cedulaUsuario">
+        </div>
+
+        <div>
+          <label for ="direccionUsuario">
+
+          </label>
+          <input class="form-control"
+                 id="direccionUsuario"
+                 name="direccionUsuario"
+                 placeholder="Direccion Usuario"
+                 type="text"
+                 [(ngModel)]="direccionUsuario">
+        </div>
+
+        <div>
+          <label for ="telefonoUsuario">
+
+          </label>
+          <input class="form-control"
+                 id="telefonoUsuario"
+                 name="telefonoUsuario"
+                 placeholder="Telefono Usuario"
+                 type="text"
+                 [(ngModel)]="telefonoUsuario">
+        </div>
+
+        <div>
+          <label for ="passwordUsuario">
+
+          </label>
+          <input class="form-control"
+                 id="passwordUsuario"
+                 name="passwordUsuario"
+                 placeholder="Password Usuario"
+                 type="text"
+                 [(ngModel)]="passwordUsuario">
+        </div>
+        <br>
+
+        <div *ngIf="haciendas" >
+          <select  class="custom-select" id = idHaciendaUsuario name="idHaciendaUsuario" >
+            <option *ngFor="let hacienda of haciendas" [value]="hacienda.id" >
+              {{hacienda.nombreHacienda}}</option>
+          </select>
+        </div>
+        <br>
+
+        <div *ngIf="todosRoles">
+          <select class="custom-select" name="rol" [(ngModel)]="rol">
+            <option *ngFor="let rol of todosRoles" value="{{rol.id}}"> {{ rol.nombreRol }}</option>
+          </select>
+        </div>
+
+        <br><br>
+
+
+        <div class="trans text-center">
+          <button class="btn btn-secondary btn-lg active" [disabled]="formularioCrearUsuario.invalid" (click)="crear()">
+            {{nombreBoton}}
+          </button>
+        </div>
+
+        <br><br><br>
+
+      </form>
+    </div>
+
+    <div class="col-8">
+      <table *ngIf="usuarios" align="center">
+        <table class="table table-hover animated fadeInUp">
+          <caption>Lista de Haciendas</caption>
+          <!-- tr -> table row -->
+          <thead>
+          <tr>
+            <!-- th -> table header -->
+            <th width="30%">Nombre</th>
+            <th width="20%">Cedula</th>
+
+            <th width="50%">Direccion</th>
+            <th width="20%">Telefono</th>
+          </tr>
+          </thead>
+          <!-- tr -> table row -->
+          <tbody *ngFor="let usuario of usuarios">
+
+          <tr>
+
+            <td>{{usuario.nombreUsuario}} </td>
+            <td>{{usuario.cedulaUsuario}}</td>
+            <td>{{usuario.direccionUsuario}}</td>
+            <td>{{usuario.telefonoUsuario}}</td>
+
+            <td>
+              <form action="/Hacienda/borrar/<%= hacienda.id %>"
+                    method="post"
+              >
+                <!--<button type="button">Yo no</button>-->
+                <!--<button>Yo si</button>-->
+                <button type="submit"
+                        class="btn btn-outline-danger btn-block btn-espaciado"
+                        (click)="eliminar(usuario)">Eliminar
+                </button>
+              </form>
+              <a [routerLink]="['/login','usuario-administrador','ver-usuario', usuario.id]">
+                <button type="submit"
+                        class="btn btn-outline-info btn-block btn-espaciado"
+                >
+                  Actualizar
+                </button>
+              </a>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </table>
+    </div>
+
+  </div>
+
+</div>
+
+
+<br><br>
+
+
+
+
+
+

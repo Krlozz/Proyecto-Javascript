@@ -1,0 +1,11 @@
+
+.tocenter {
+  margin:0 auto;
+  display: inline;
+}
+
+.imgCarousel {
+  align:"center";
+  height:400px ;
+  width: 800px;
+}
