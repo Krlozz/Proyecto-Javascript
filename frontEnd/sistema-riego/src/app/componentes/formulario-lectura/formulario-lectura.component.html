@@ -31,14 +31,13 @@
       <td>{{lectura.descripcion}}</td>
 
       <td>
-        <form action="/Hacienda/borrar/<%= hacienda.id %>"
-              method="post"
+        <form
         >
           <!--<button type="button">Yo no</button>-->
           <!--<button>Yo si</button>-->
           <button type="submit"
                   class="btn btn-secondary btn-block btn-espaciado"
-                  onclick="borrar(event)">Foco-1
+                  (click)="prender()">Foco-1
           </button>
         </form>
         <a class="quitar-decoracion" href="/Hacienda/actualizar-hacienda/<%= hacienda.id %>">

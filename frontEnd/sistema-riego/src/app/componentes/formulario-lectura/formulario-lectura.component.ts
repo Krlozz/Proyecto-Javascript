@@ -61,8 +61,19 @@ export class FormularioLecturaComponent implements OnInit {
     // console.log(objetoHacienda)
     this.formularioValido.emit((objetoLectura));
   }
-  crear() {
 
+  prender(){
+    const datosPrenderLED = {
+      led: 'perrrrooss',
+      status:'kheee'
+    }
+
+    console.log(datosPrenderLED)
+  this.lecturaRestService.prenderPost(datosPrenderLED).subscribe(res=>{
+    console.log((res))
+  })
+  }
+  crear() {
     this.lecturaRestService.create(this.fechaLectura, this.descripcionLectura, this.idSensor).subscribe(
       resp => {
         console.log(resp);

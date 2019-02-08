@@ -68,6 +68,17 @@ export class LecturaRestService {
 
   }
 
+  prenderPost(datosLED:any){
+    // http://localhost:1337/Lectura/controlLed
+    console.log(datosLED)
+    const  url = 'http://localhost:1337/Lectura/controlLed'
+      // const url = environment.url + this.nombreModelo
+      //   + '/' + 'controlLed';
+
+    return this._httpClient
+      .post(url, datosLED)
+  }
+
 
 }
 
