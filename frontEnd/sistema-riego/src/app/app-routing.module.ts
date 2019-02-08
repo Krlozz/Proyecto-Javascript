@@ -132,36 +132,36 @@ const routes: Routes = [
   },
 
   {
-    path: 'control',
+    path: 'usuario-encargado/perfil/control',
     component: RutaHistorialComponent
   },
 
   {
-    path: 'gestion-usuarios',
+    path: 'usuario-administrador/gestion-usuarios',
     component: RutaGestionUsuariosComponent
   },
 
   {
-    path: 'asignar-sensor',
+    path: 'usuario-administrador/asignar-sensor',
     component: RutaAsignarSensorComponent
   },
 
   {
-    path: 'gestion-hacienda',
+    path: 'usuario-administrador/gestion-hacienda',
     component: RutaGestionHaciendaComponent
   },
 
   {
-    path: 'ver-usuario/:idUsuario',  //  /login/usuario-administrador/ver-usuario
+    path: 'usuario-administrador/gestion-usuarios/ver-usuario/:idUsuario',  //  /login/usuario-administrador/ver-usuario
     component: RutaVerDetalleUsuarioComponent
   },
 
   {
-    path: 'gestion-parcela',
+    path: 'usuario-administrador/gestion-parcela',
     component: RutaGestionParcelaComponent
   },
   {
-    path: 'gestion-subparcela',
+    path: 'usuario-administrador/gestion-subparcela',
     component: RutaGestionSubparcelaComponent
   },
 

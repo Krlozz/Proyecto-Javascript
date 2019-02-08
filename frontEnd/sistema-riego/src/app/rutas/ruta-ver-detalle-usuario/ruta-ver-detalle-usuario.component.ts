@@ -55,7 +55,7 @@ export class RutaVerDetalleUsuarioComponent implements OnInit {
         (usuarioActualizado: Usuario) => {
 
           const url = [
-            '/gestion-usuarios'
+            '/usuario-administrador/gestion-usuarios'
           ];
 
           alert('Usuario:   ' + usuarioActualizado.nombreUsuario + 'Actualizado .......!!!!');
