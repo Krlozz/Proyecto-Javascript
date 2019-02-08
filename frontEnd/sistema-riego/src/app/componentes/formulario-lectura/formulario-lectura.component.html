@@ -37,15 +37,20 @@
           <!--<button>Yo si</button>-->
           <button type="submit"
                   class="btn btn-secondary btn-block btn-espaciado"
-                  (click)="prender()">Foco-1
+                  (click)="prender()" (dblclick)="apagar()">Foco-1
           </button>
+          <button type="submit"
+                  class="btn btn-light btn-block btn-espaciado"
+                  (click)="prender2()" (dblclick)="apagar2()">Foco-2
+          </button>
+
         </form>
-        <a class="quitar-decoracion" href="/Hacienda/actualizar-hacienda/<%= hacienda.id %>">
-          <button class="btn btn-light btn-block btn-espaciado"
-                  type="button">
-            Foco-2
-          </button>
-        </a>
+        <!--<a class="quitar-decoracion" href="/Hacienda/actualizar-hacienda/<%= hacienda.id %>">-->
+          <!--<button class="btn btn-light btn-block btn-espaciado"-->
+                          <!--type="button"(click)="prender2()">-->
+            <!--Foco-2-->
+          <!--</button>-->
+        <!--</a>-->
       </td>
     </tr>
 

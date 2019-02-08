@@ -3,7 +3,7 @@ var net = require('net');
 // This function create and return a net.Socket object to represent TCP client.
 function getConn() {
   var option = {
-    host: '172.31.99.24',
+    host: '172.31.99.12',
     port: 8888
   };
 

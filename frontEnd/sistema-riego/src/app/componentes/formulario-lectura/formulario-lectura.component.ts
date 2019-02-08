@@ -64,15 +64,52 @@ export class FormularioLecturaComponent implements OnInit {
 
   prender(){
     const datosPrenderLED = {
-      led: 'perrrrooss',
-      status:'kheee'
+      led: '1',
+      status:'on'
     }
 
     console.log(datosPrenderLED)
-  this.lecturaRestService.prenderPost(datosPrenderLED).subscribe(res=>{
-    console.log((res))
-  })
+    this.lecturaRestService.prenderPost(datosPrenderLED).subscribe(res=>{
+      console.log((res))
+    })
   }
+
+  apagar(){
+    const datosPrenderLED = {
+      led: '1',
+      status:'off'
+    }
+
+    console.log(datosPrenderLED)
+    this.lecturaRestService.prenderPost(datosPrenderLED).subscribe(res=>{
+      console.log((res))
+    })
+  }
+
+  prender2(){
+    const datosPrenderLED = {
+      led: '0',
+      status:'on'
+    }
+
+    console.log(datosPrenderLED)
+    this.lecturaRestService.prenderPost(datosPrenderLED).subscribe(res=>{
+      console.log((res))
+    })
+  }
+
+  apagar2(){
+    const datosPrenderLED = {
+      led: '0',
+      status:'off'
+    }
+
+    console.log(datosPrenderLED)
+    this.lecturaRestService.prenderPost(datosPrenderLED).subscribe(res=>{
+      console.log((res))
+    })
+  }
+
   crear() {
     this.lecturaRestService.create(this.fechaLectura, this.descripcionLectura, this.idSensor).subscribe(
       resp => {
