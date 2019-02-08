@@ -14,9 +14,10 @@ export class RolRestService {
   obtnerRoles() {
 
     const url = environment.url + '/rol';
-
     return this._httpClient.get(url);
   }
+
+
 
 
 }

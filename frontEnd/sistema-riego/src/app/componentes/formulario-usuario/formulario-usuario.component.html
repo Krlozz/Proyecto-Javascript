@@ -80,15 +80,21 @@
         </div>
         <br>
 
-        <div *ngIf="haciendas" >
-          <select  class="custom-select" id = idHaciendaUsuario name="idHaciendaUsuario" >
-            <option *ngFor="let hacienda of haciendas" [value]="hacienda.id" >
+        <div *ngIf="haciendas">
+            <label>
+              Seleccione Hacienda
+            </label>
+          <select  class="custom-select"  name="idHaciendaUsuario" [(ngModel)]="idHaciendaUsuario">
+            <option *ngFor="let hacienda of haciendas" value="{{hacienda.id}}" >
               {{hacienda.nombreHacienda}}</option>
           </select>
         </div>
         <br>
 
         <div *ngIf="todosRoles">
+            <label>
+                Seleccione Rol
+            </label>
           <select class="custom-select" name="rol" [(ngModel)]="rol">
             <option *ngFor="let rol of todosRoles" value="{{rol.id}}"> {{ rol.nombreRol }}</option>
           </select>

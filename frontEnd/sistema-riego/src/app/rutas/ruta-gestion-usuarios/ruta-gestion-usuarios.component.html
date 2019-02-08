@@ -16,11 +16,10 @@
         <div class="col-sm-12">
           <app-formulario-usuario
             [nombreBoton]="'Crear'"
-            (formularioValido)="crearUsuario($event)"
+            (formularioValido)="obteneidoDatosUsuario($event)"
           >
           </app-formulario-usuario>
-
-
+          <button class="btn btn-primary" (click)="crearUsuario()">Crear</button>
         </div>
       </div>
     </div>

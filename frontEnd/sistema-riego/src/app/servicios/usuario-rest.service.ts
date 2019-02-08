@@ -34,8 +34,8 @@ export class UsuarioRestService {
          direccion: any,
          telefono: any,
          password: any,
-         idHacienda: any
-  ) {
+         idHacienda: any,         
+  ):Observable<Usuario> {
 
 
     const objetoAGuardar = {
@@ -44,14 +44,14 @@ export class UsuarioRestService {
       direccionUsuario: direccion,
       telefonoUsuario: telefono,
       password,
-      idHacienda
+      idHacienda,      
     };
 
     const url = environment.url + this.nombreModelo;
 
     return this._httpClient
-      .post(url, objetoAGuardar);
-      // .pipe(map(r => <Usuario> r)); // Castear
+      .post(url, objetoAGuardar)
+      .pipe(map(r => <Usuario> r)); // Castear
   }
   findOneById(id: number | string): Observable<Usuario> {
     const url = environment.url + this.nombreModelo

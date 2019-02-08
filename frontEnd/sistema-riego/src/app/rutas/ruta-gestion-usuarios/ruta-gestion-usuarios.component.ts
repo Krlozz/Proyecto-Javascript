@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {UsuarioRestService} from "../../servicios/usuario-rest.service";
-import {Usuario} from "../../interfaces/usuario";
+import { UsuarioRestService } from "../../servicios/usuario-rest.service";
+import { Usuario } from "../../interfaces/usuario";
 
 @Component({
   selector: 'app-ruta-gestion-usuarios',
@@ -11,37 +11,42 @@ export class RutaGestionUsuariosComponent implements OnInit {
 
   constructor(private readonly _usuarioRestService: UsuarioRestService) { }
 
+  usuarioACrear: any={}
   ngOnInit() {
-  }
-
-  crearUsuario(usuarioObjeto){
-    console.log(usuarioObjeto,'sssss');
-    const crearUsuario$ = this._usuarioRestService
-      .create(
-        usuarioObjeto.nombreUsuario,
-        usuarioObjeto.cedulaUsuario,
-        usuarioObjeto.password,
-        usuarioObjeto.direccionUsuario,
-        usuarioObjeto.telefonoUsuario,
-        usuarioObjeto.idHacienda
-
-      );
-    crearUsuario$
-      .subscribe(
-        (usuario:Usuario) =>{
-          alert(`Usuario creado: ${usuario.nombreUsuario}`)
-        },
-        (error) =>{
-          console.log('Error: ', error)
-        }
-      );
 
   }
 
-  nombreContieneA(nombre:String):boolean{
+  obteneidoDatosUsuario(usuarioObjeto) {
+    this.usuarioACrear = usuarioObjeto;    
+  }
+
+
+  crearUsuario() {
+    // console.log(this.usuarioACrear, 'siiiiii');
+    // const crearUsuario$ = this._usuarioRestService
+    //   .create(
+    //     this.usuarioACrear.nombreUsuario,
+    //     this.usuarioACrear.cedulaUsuario,
+    //     this.usuarioACrear.password,
+    //     this.usuarioACrear.direccionUsuario,
+    //     this.usuarioACrear.telefonoUsuario,
+    //     this.usuarioACrear.idHacienda
+    //   );
+    // crearUsuario$
+    //   .subscribe(
+    //     (usuario: Usuario) => {
+    //       alert(`Usuario creado: ${usuario.nombreUsuario}`)
+    //     },
+    //     (error) => {
+    //       console.log('Error: ', error)
+    //     }
+    //   );
+  }
+
+  nombreContieneA(nombre: String): boolean {
     return nombre.toLowerCase().includes('a')
   }
-  mostrarEnConsola(objeto){
+  mostrarEnConsola(objeto) {
     console.log(objeto)
     console.log(objeto)
   }

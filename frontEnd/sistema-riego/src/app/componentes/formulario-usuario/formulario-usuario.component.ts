@@ -1,10 +1,11 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {UsuarioRestService} from '../../servicios/usuario-rest.service';
-import {HaciendaRestService} from '../../servicios/hacienda-rest.service';
-import {RegionRestService} from '../../servicios/region-rest.service';
-import {AuthService} from '../../servicios/rest/auth.service';
-import {RolRestService} from '../../servicios/rol-rest.service';
-import {Usuario} from '../../interfaces/usuario';
+import { CrearRolXUserRestService } from './../../servicios/crear-rolXUser-rest.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { UsuarioRestService } from '../../servicios/usuario-rest.service';
+import { HaciendaRestService } from '../../servicios/hacienda-rest.service';
+import { RegionRestService } from '../../servicios/region-rest.service';
+import { AuthService } from '../../servicios/rest/auth.service';
+import { RolRestService } from '../../servicios/rol-rest.service';
+import { Usuario } from '../../interfaces/usuario';
 
 
 @Component({
@@ -17,27 +18,23 @@ export class FormularioUsuarioComponent implements OnInit {
   usuarios = [];
   haciendas = [];
 
-  @Input()
+  /* @Input()
   nombre: string;
   cedula: string;
   direccion: string;
   telefono: string;
   password: string;
-  idHacienda: number;
+  idHacienda: number; */
 
-  @Input()
-  nombreBoton: string;
-  @Output()
-  formularioValido = new EventEmitter();
+  @Input() nombreBoton: string;
+  @Output() formularioValido = new EventEmitter();
   nombreUsuario: string;
   cedulaUsuario: string;
   direccionUsuario: string;
   telefonoUsuario: string;
   passwordUsuario: string;
-  Hacienda: any = {
-    id: ''
-  };
-  rol: any;
+  Hacienda: number
+  rol: number;
   idHaciendaUsuario: number;
 
   todosRoles: any;
@@ -45,57 +42,68 @@ export class FormularioUsuarioComponent implements OnInit {
   constructor(
     public readonly usuarioRestService: UsuarioRestService,
     public readonly haciendaRestService: HaciendaRestService,
-    private readonly _rolService: RolRestService) { }
+    private readonly _rolService: RolRestService,
+    private readonly _crearRolXUserRestService: CrearRolXUserRestService
+  ) { }
 
   ngOnInit() {
-    this.nombreUsuario = this.nombre;
+    /* this.nombreUsuario = this.nombre;
     this.cedulaUsuario = this.cedula;
     this.direccionUsuario = this.direccion;
     this.telefonoUsuario = this.telefono;
     this.passwordUsuario = this.password;
-    this.idHaciendaUsuario = this.idHacienda;
+    this.idHaciendaUsuario = this.idHacienda; */
 
     this.findAll();
     this.findAllHaciendas();
     this.obtenerRoles();
+    this.emitirFormularioValido()
   }
 
   obtenerRoles() {
 
-    this._rolService.obtnerRoles().subscribe(
-      roles => {
-        this.todosRoles = roles;
-        // console.log(roles);
-      }
+    this._rolService.obtnerRoles()
+      .subscribe(
+        roles => {
+          this.todosRoles = roles;
+        }
 
-    );
+      );
   }
 
 
   emitirFormularioValido() {
-
     const objetoUsuario = {
       nombreUsuario: this.nombreUsuario,
       cedulaUsuario: this.cedulaUsuario,
       direccionUsuario: this.direccionUsuario,
       telefonoUsuario: this.telefonoUsuario,
       password: this.passwordUsuario,
-      idHacienda: this.idHaciendaUsuario
+      idHacienda: this.idHaciendaUsuario,
     };
-    this.formularioValido.emit((objetoUsuario));
+    this.formularioValido.emit(objetoUsuario);
   }
+
   crear() {
-    console.log(this.rol, 'dasdsdasd', this.nombreUsuario);
+    console.log(this.rol, 'dasdsdasd', this.idHaciendaUsuario);
     this.usuarioRestService.create(this.nombreUsuario, this.cedulaUsuario,
-      this.direccionUsuario, this.telefonoUsuario, this.passwordUsuario, this.idHaciendaUsuario).subscribe(
-      resp => {
-        console.log(resp);
-        // const rolPorUsuarioCrear = {
-        //   idUsuario: resp.id,
-        //   idRol:
-        // }
-      }
-    );
+      this.direccionUsuario, this.telefonoUsuario, this.passwordUsuario, this.idHaciendaUsuario)
+      .subscribe(
+        usuarioCreado => {
+          const idUsuarioCreado = usuarioCreado.id
+          const idRolSeleccionado = this.rol
+
+          const usuarioRolCrear = {
+            idUsuario: idUsuarioCreado,
+            idRol: idRolSeleccionado
+          }
+          console.log(usuarioCreado);
+          this._crearRolXUserRestService.create(usuarioRolCrear)
+            .subscribe(res => {
+              console.log(res, 'se creooo')
+            })
+        }
+      );
   }
 
 

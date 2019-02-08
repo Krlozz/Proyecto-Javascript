@@ -10,14 +10,13 @@ export class CrearRolXUserRestService {
   constructor(private readonly _httpClient: HttpClient) {   }
 
   create(rolxUsuario:any) {
-
+    console.log(rolxUsuario, 'llegooo')
     // const objetoAGuardar = {
     //   idUsuario,
     //   idRol,
     // };
 
     const url = environment.url + this.nombreModelo;
-
     return this._httpClient
       .post(url, rolxUsuario);
   }
