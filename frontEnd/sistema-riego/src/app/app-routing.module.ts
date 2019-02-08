@@ -135,35 +135,50 @@ const routes: Routes = [
     path: 'usuario-encargado/perfil/control',
     component: RutaHistorialComponent
   },
+  {
+    path: 'usuario-administrador',
+    component: RutaUsuarioAdministradorComponent,
+    children: [
 
-  {
-    path: 'usuario-administrador/gestion-usuarios',
-    component: RutaGestionUsuariosComponent
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'gestion-usuarios'
+      },
+
+      {
+        path: 'gestion-usuarios',
+        component: RutaGestionUsuariosComponent
+      },
+
+      {
+        path: 'asignar-sensor',
+        component: RutaAsignarSensorComponent
+      },
+
+      {
+        path: 'gestion-hacienda',
+        component: RutaGestionHaciendaComponent
+      },
+
+      {
+        path: 'gestion-usuarios/ver-usuario/:idUsuario',  //  /login/usuario-administrador/ver-usuario
+        component: RutaVerDetalleUsuarioComponent
+      },
+
+      {
+        path: 'gestion-parcela',
+        component: RutaGestionParcelaComponent
+      },
+      {
+        path: 'gestion-subparcela',
+        component: RutaGestionSubparcelaComponent
+      },
+
+    ]
   },
 
-  {
-    path: 'usuario-administrador/asignar-sensor',
-    component: RutaAsignarSensorComponent
-  },
 
-  {
-    path: 'usuario-administrador/gestion-hacienda',
-    component: RutaGestionHaciendaComponent
-  },
-
-  {
-    path: 'usuario-administrador/gestion-usuarios/ver-usuario/:idUsuario',  //  /login/usuario-administrador/ver-usuario
-    component: RutaVerDetalleUsuarioComponent
-  },
-
-  {
-    path: 'usuario-administrador/gestion-parcela',
-    component: RutaGestionParcelaComponent
-  },
-  {
-    path: 'usuario-administrador/gestion-subparcela',
-    component: RutaGestionSubparcelaComponent
-  },
 
 
 
