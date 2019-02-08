@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Parcela} from "../../interfaces/parcela";
-import {ParcelaRestService} from "../../servicios/parcela-rest.service";
+import {Parcela} from '../../interfaces/parcela';
+import {ParcelaRestService} from '../../servicios/parcela-rest.service';
 
 @Component({
   selector: 'app-ruta-gestion-parcela',
@@ -19,7 +19,7 @@ export class RutaGestionParcelaComponent implements OnInit {
   ngOnInit() {
   }
 
-  crearParcela(parcelaObjeto){
+  crearParcela(parcelaObjeto) {
     const crearParcela$ = this.parcelaRestService
       .create(
         parcelaObjeto.codigoParcela,
@@ -29,25 +29,23 @@ export class RutaGestionParcelaComponent implements OnInit {
       );
     crearParcela$
       .subscribe(
-        (parcela:Parcela) =>{
-          alert(`Parcela creada: ${parcela.codigoParcela}`)
+        (parcela: Parcela) => {
+          alert(`Parcela creada: ${parcela.codigoParcela}`);
         },
-        (error) =>{
-          console.log('Error: ', error)
+        (error) => {
+          console.log('Error: ', error);
         }
       );
 
   }
 
-  nombreContieneA(nombre:String):boolean{
-    return nombre.toLowerCase().includes('a')
+  nombreContieneA(nombre: String): boolean {
+    return nombre.toLowerCase().includes('a');
   }
-  mostrarEnConsola(objeto){
-    console.log(objeto)
-    console.log(objeto)
+  mostrarEnConsola(objeto) {
+    console.log(objeto);
+    console.log(objeto);
   }
-
-
 
 }
 interface ParcelaEjemplo {

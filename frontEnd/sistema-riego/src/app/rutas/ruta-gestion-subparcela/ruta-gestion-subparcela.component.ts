@@ -48,7 +48,6 @@ export class RutaGestionSubparcelaComponent implements OnInit {
   }
 
 
-
 }
 interface SubparcelaEjemplo {
   codigo: string;

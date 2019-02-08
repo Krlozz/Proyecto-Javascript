@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {UsuarioRestService} from "../../servicios/usuario-rest.service";
-import {Usuario} from "../../interfaces/usuario";
-import {LecturaRestService} from "../../servicios/rest/historial-rest.service";
-import {Lectura} from "../../interfaces/lectura";
+import {UsuarioRestService} from '../../servicios/usuario-rest.service';
+import {Usuario} from '../../interfaces/usuario';
+import {LecturaRestService} from '../../servicios/rest/historial-rest.service';
+import {Lectura} from '../../interfaces/lectura';
 
 @Component({
   selector: 'app-ruta-historial',
@@ -15,7 +15,7 @@ export class RutaHistorialComponent implements OnInit {
   ngOnInit() {
   }
 
-  lectura(lecturaObjeto){
+  lectura(lecturaObjeto) {
     const crearLectura$ = this._lecturaRestService
       .create(
         lecturaObjeto.fechaLectura,
@@ -26,11 +26,11 @@ export class RutaHistorialComponent implements OnInit {
       );
     crearLectura$
       .subscribe(
-        (lectura:Lectura) =>{
-          alert(`Lectura creada: ${lectura.descripcionLectura}`)
+        (lectura: Lectura) => {
+          alert(`Lectura creada: ${lectura.descripcionLectura}`);
         },
-        (error) =>{
-          console.log('Error: ', error)
+        (error) => {
+          console.log('Error: ', error);
         }
       );
 

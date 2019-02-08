@@ -26,13 +26,13 @@ export class ParcelaRestService {
   delete(id: number): Observable<Parcela> {
     return this._httpClient
       .delete(environment.url + this.nombreModelo + `/${id}`)
-      .pipe(map(r => <Parcela> r)); // Castear
+      .pipe(map(r => r as Parcela)); // Castear
   }
 
   create(codigo: any,
          medidas: any,
-         idHacienda:any,
-         idUsuario:any
+         idHacienda: any,
+         idUsuario: any
 
   ) {
 
