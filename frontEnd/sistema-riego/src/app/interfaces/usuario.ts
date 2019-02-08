@@ -8,5 +8,6 @@ export interface Usuario {
   direccionUsuario:string;
   password:string;
   idHacienda:string;
+  rolesUsuarios?: any
 
 }

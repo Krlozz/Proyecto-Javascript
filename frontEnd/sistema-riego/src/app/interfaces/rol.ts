@@ -1,4 +1,4 @@
-export interface Parcela {
+export interface Rol {
   id?: number;
   nombreRol: string;
   descripcionRol: string;

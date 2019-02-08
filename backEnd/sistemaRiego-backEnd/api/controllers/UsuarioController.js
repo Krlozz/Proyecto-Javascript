@@ -16,6 +16,7 @@ module.exports = {
       password: parametros.password,
     });
 
+    console.log(usuarioLogeado,'looo')
     const error = usuarioLogeado.length === 0;
 
     if (!error) {

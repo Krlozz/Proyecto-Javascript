@@ -1,6 +1,7 @@
+import { CrearRolXUserRestService } from './../../servicios/crear-rolXUser-rest.service';
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from '../../servicios/rest/auth.service';
-import {RolRestService} from '../../servicios/rol-rest.service';
+import { AuthService } from '../../servicios/rest/auth.service';
+import { RolRestService } from '../../servicios/rol-rest.service';
 
 @Component({
   selector: 'app-ruta-login',
@@ -15,7 +16,11 @@ export class RutaLoginComponent implements OnInit {
     rol: ''
   };
 
-  constructor(private readonly _authService: AuthService, private readonly _rolService: RolRestService) { }
+  constructor(
+    private readonly _authService: AuthService,
+    private readonly _rolService: RolRestService,
+    private readonly _crearRolXUserRestService: CrearRolXUserRestService
+  ) { }
 
   todosRoles: any;
 
@@ -45,9 +50,11 @@ export class RutaLoginComponent implements OnInit {
 
     respuestaLogin$
       .subscribe(
-        (usuario) => {
-          this._authService.usuario = usuario;
-          console.log(usuario);
+        (usuario) => {                    
+            this._authService.findById(usuario.id)
+            .subscribe(res=>{
+              console.log(res,'kheeeeeee')
+            })
         },
         (error) => {
           console.error(error);

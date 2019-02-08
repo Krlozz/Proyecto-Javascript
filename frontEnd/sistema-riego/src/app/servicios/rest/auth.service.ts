@@ -28,18 +28,27 @@ export class AuthService {
   }
 
   login(cedulaUsuario: string,
-        password: string): Observable<Usuario> {
+        password: string
+        
+        ): Observable<Usuario> {
 
     const url = environment.url + '/usuario/login';
 
     return this._httpClient
-      .post(url, {
-        cedulaUsuario,
-        password
-      })
+      .get(url+'Usuario?cedulaUsuario=22222&password=lkj')
       .pipe(map(r => r as Usuario)); // Casteo
 
   }
+
+  findById(id:number): Observable<Usuario> {
+
+const url = environment.url + '/usuario';
+
+return this._httpClient
+  .get(url+'/'+id)
+  .pipe(map(r => r as Usuario)); // Casteo
+
+}
 
 
 }
