@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="618a0b94-a331-4186-b8d9-da756ff8d19f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-lectura/formulario-lectura.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-lectura/formulario-lectura.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-login/ruta-login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-login/ruta-login.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="618a0b94-a331-4186-b8d9-da756ff8d19f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -20,7 +13,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="201">
@@ -32,10 +25,17 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/config/security.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-414" />
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-lectura/formulario-lectura.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
+            <state relative-caret-position="966">
               <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -47,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-login/ruta-login.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
+            <state relative-caret-position="1518">
               <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="70" />
               <folding>
                 <element signature="e#0#89#0" expanded="true" />
@@ -59,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="2185">
               <caret line="103" column="31" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
             </state>
           </provider>
@@ -68,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-lectura/formulario-lectura.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
+            <state relative-caret-position="1380">
               <caret line="64" column="2" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
@@ -80,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/controllers/LecturaController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1006">
+            <state relative-caret-position="1012">
               <caret line="44" column="12" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="12" />
             </state>
           </provider>
@@ -89,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/servicios/rest/historial-rest.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
+            <state relative-caret-position="1495">
               <caret line="70" column="2" selection-start-line="70" selection-start-column="2" selection-end-line="70" selection-end-column="2" />
             </state>
           </provider>
@@ -98,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-login/ruta-login.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
+            <state relative-caret-position="2162">
               <caret line="94" column="83" selection-start-line="94" selection-start-column="83" selection-end-line="94" selection-end-column="83" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -112,7 +112,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Lectura.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
+            <state relative-caret-position="414">
               <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
@@ -250,29 +250,6 @@
               <item name="Proyecto-Javascript" type="462c0819:PsiDirectoryNode" />
               <item name="backEnd" type="462c0819:PsiDirectoryNode" />
               <item name="sistemaRiego-backEnd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Proyecto-Javascript" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Proyecto-Javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="backEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="sistemaRiego-backEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Proyecto-Javascript" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Proyecto-Javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="backEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="sistemaRiego-backEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Proyecto-Javascript" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Proyecto-Javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="backEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="sistemaRiego-backEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Proyecto-Javascript" type="b2602c69:ProjectViewProjectNode" />
@@ -421,16 +398,18 @@
       <workItem from="1549545566627" duration="18049000" />
       <workItem from="1549563843676" duration="16933000" />
       <workItem from="1549656048871" duration="6038000" />
+      <workItem from="1550198618620" duration="211000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145042000" />
+    <option name="totallyTimeSpent" value="145253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12434141" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12434141" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -442,7 +421,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49789253" visible="true" weight="0.31661093" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49789253" visible="true" weight="0.31661093" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021075" side_tool="true" weight="0.31661093" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32887402" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -479,16 +458,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/servicios/crear-rolXUser-rest.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/servicios/usuario-rest.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -825,16 +794,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Lectura.js">
+    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="201">
+          <caret line="106" column="119" selection-start-line="106" selection-start-column="119" selection-end-line="106" selection-end-column="119" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-lectura/formulario-lectura.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-login/ruta-login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1518">
+          <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2185">
+          <caret line="103" column="31" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-lectura/formulario-lectura.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="64" column="2" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/controllers/LecturaController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="44" column="12" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/servicios/rest/historial-rest.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1495">
+          <caret line="70" column="2" selection-start-line="70" selection-start-column="2" selection-end-line="70" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-login/ruta-login.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="2162">
           <caret line="94" column="83" selection-start-line="94" selection-start-column="83" selection-end-line="94" selection-end-column="83" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -844,65 +867,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/servicios/rest/historial-rest.service.ts">
+    <entry file="file://$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/models/Lectura.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="70" column="2" selection-start-line="70" selection-start-column="2" selection-end-line="70" selection-end-column="2" />
+        <state relative-caret-position="414">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/api/controllers/LecturaController.js">
+    <entry file="file://$PROJECT_DIR$/backEnd/sistemaRiego-backEnd/config/security.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1006">
-          <caret line="44" column="12" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-lectura/formulario-lectura.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="64" column="2" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-lectura/formulario-lectura.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="103" column="31" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/rutas/ruta-login/ruta-login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontEnd/sistema-riego/src/app/componentes/formulario-usuario/formulario-usuario.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="106" column="119" selection-start-line="106" selection-start-column="119" selection-end-line="106" selection-end-column="119" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-414" />
       </provider>
     </entry>
   </component>
